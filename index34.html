@@ -1,0 +1,5641 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="LearnHub - Descubre tu pasión y aprende a tu propio ritmo con cursos interactivos">
+    <!-- Fuentes y estilos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/4a32509195.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRM | Prax Tasks</title>
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+    <link rel="stylesheet" href="crmDash.css">
+
+</head>
+
+
+<body>
+
+
+<!-- =========================================
+     SIDEBAR
+========================================= -->
+
+<aside class="sidebar" id="sidebar">
+
+    <div class="brand">
+
+        <div class="brand-icon">
+            <i class="fa-solid fa-chart-line"></i>
+        </div>
+
+        <div>
+
+            <strong>Prax</strong>
+            <span>Tasks</span>
+
+        </div>
+
+    </div>
+
+
+    <div class="workspace">
+
+
+        <div class="workspace-button" id="Buissnes-workspace"></div>
+
+    </div>
+
+
+    <nav class="sidebar-nav">
+
+        <small class="nav-label">
+            PRINCIPAL
+        </small>
+
+
+        <a
+            href="#"
+            class="nav-item active"
+            data-page="dashboard"
+        >
+
+            <i class="fa-solid fa-grid-2"></i>
+
+            <span>Dashboard</span>
+
+        </a>
+
+
+        <a
+            href="#"
+            class="nav-item"
+            data-page="prospectos"
+        >
+
+            <i class="fa-solid fa-user-plus"></i>
+
+            <span>Prospectos</span>
+
+            <span class="nav-badge">
+                12
+            </span>
+
+        </a>
+
+
+        <a
+            href="#"
+            class="nav-item"
+            data-page="clientes"
+        >
+
+            <i class="fa-solid fa-users"></i>
+
+            <span>Clientes</span>
+
+        </a>
+
+
+        <a
+            href="#"
+            class="nav-item"
+            data-page="servicios"
+        >
+
+            <i class="fa-solid fa-briefcase"></i>
+
+            <span>Servicios</span>
+
+        </a>
+
+
+        <a
+            href="#"
+            class="nav-item"
+            data-page="tareas"
+        >
+
+            <i class="fa-solid fa-list-check"></i>
+
+            <span>Tareas</span>
+
+            <span class="nav-badge warning">
+                7
+            </span>
+
+        </a>
+
+
+        <a
+            href="#"
+            class="nav-item"
+            data-page="calendario"
+        >
+
+            <i class="fa-regular fa-calendar"></i>
+
+            <span>Calendario</span>
+
+        </a>
+
+
+        <small class="nav-label">
+            GESTIÓN
+        </small>
+
+
+        <a
+            href="#"
+            class="nav-item"
+            data-page="documentos"
+        >
+
+            <i class="fa-regular fa-folder-open"></i>
+
+            <span>Documentos</span>
+
+        </a>
+
+
+        <a
+            href="#"
+            class="nav-item"
+            data-page="reportes"
+        >
+
+            <i class="fa-solid fa-chart-pie"></i>
+
+            <span>Reportes</span>
+
+        </a>
+
+
+        <small class="nav-label">
+            SISTEMA
+        </small>
+
+
+        <a
+            href="#"
+            class="nav-item"
+            data-page="configuracion"
+        >
+
+            <i class="fa-solid fa-gear"></i>
+
+            <span>Configuración</span>
+
+        </a>
+
+    </nav>
+
+
+    <div class="sidebar-bottom">
+
+        <div class="support-card">
+
+            <div class="support-icon">
+                <i class="fa-solid fa-headset"></i>
+            </div>
+
+            <strong>
+                ¿Necesitas ayuda?
+            </strong>
+
+            <span>
+                Contacta al soporte.
+            </span>
+
+            <button>
+                Contactar
+            </button>
+
+        </div>
+
+
+  
+
+    </div>
+
+</aside>
+
+
+
+<!-- =========================================
+     MAIN
+========================================= -->
+
+<main class="main">
+
+
+    <!-- HEADER -->
+
+    <header class="topbar">
+
+        <button
+            class="mobile-menu"
+            id="mobileMenu"
+        >
+
+            <i class="fa-solid fa-bars"></i>
+
+        </button>
+
+        <div class="search-container">
+
+            <div class="search">
+                <i class="fa-solid fa-magnifying-glass"></i>
+
+                <input
+                    id="globalSearchInput"
+                    type="text"
+                    placeholder="Buscar clientes, prospectos, RFC..."
+                    autocomplete="off"
+                >
+
+                <kbd>Ctrl K</kbd>
+            </div>
+
+            <div id="globalSearchResults"
+                class="global-search-results"
+                hidden>
+            </div>
+
+        </div>
+
+        <div class="topbar-actions">
+
+            <button class="icon-button">
+
+                <i class="fa-regular fa-circle-question"></i>
+
+            </button>
+
+
+            <button class="icon-button notification">
+
+                <i class="fa-regular fa-bell"></i>
+
+                <span></span>
+
+            </button>
+
+
+
+<div class="user-menu-container">
+
+    <div class="top-user"
+         id="UserDropdown"
+         role="button"
+         tabindex="0"
+         aria-expanded="false"
+         aria-controls="UserDropdownMenu">
+
+        <div class="user-avatar small" id="UASI">U</div>
+
+        <div class="user-info">
+            <strong id="Accountholder"></strong>
+        </div>
+
+        <i class="fa-solid fa-chevron-down user-chevron"></i>
+    </div>
+
+    <div class="user-dropdown-menu" id="UserDropdownMenu" hidden>
+
+        <div class="dropdown-profile">
+            <div class="user-avatar" id="DropdownUASI">U</div>
+
+            <div class="dropdown-profile-info">
+                <strong id="DropdownName">Usuario</strong>
+                <span id="DropdownRole">Usuario</span>
+                <small id="DropdownEmail"></small>
+            </div>
+        </div>
+
+        <div class="dropdown-divider"></div>
+
+        <button type="button" class="dropdown-item" data-action="profile">
+            <i class="fa-regular fa-user"></i>
+            <span>
+                <strong>Mi Perfil</strong>
+                <small>Ver tu información personal</small>
+            </span>
+            <i class="fa-solid fa-chevron-right item-arrow"></i>
+        </button>
+
+        <button type="button" class="dropdown-item" data-action="settings">
+            <i class="fa-solid fa-gear"></i>
+            <span>
+                <strong>Configuración</strong>
+                <small>Preferencias de tu cuenta</small>
+            </span>
+            <i class="fa-solid fa-chevron-right item-arrow"></i>
+        </button>
+
+        <button type="button" class="dropdown-item" data-action="notifications">
+            <i class="fa-regular fa-bell"></i>
+            <span>
+                <strong>Notificaciones</strong>
+                <small>Gestiona tus alertas</small>
+            </span>
+            <i class="fa-solid fa-chevron-right item-arrow"></i>
+        </button>
+
+        <div class="dropdown-divider"></div>
+
+        <button type="button" class="dropdown-item logout-item" data-action="logout">
+            <i class="fa-solid fa-arrow-right-from-bracket"></i>
+            <span>
+                <strong>Cerrar Sesión</strong>
+                <small>Salir de tu cuenta</small>
+            </span>
+        </button>
+
+    </div>
+</div>
+
+
+        </div>
+
+    </header>
+
+
+
+    <!-- CONTENT -->
+
+    <div class="content">
+
+
+        <!-- =================================
+             DASHBOARD
+        ================================= -->
+
+        <section class="page active" id="dashboard" >
+
+            <div class="page-header">
+
+                <div>
+
+                    <div class="breadcrumb" id="Start"></div>
+
+                    <h1>
+                        <span id="Greeting"></span>
+                        <span id="User"></span>
+                       
+                    </h1>
+
+                    <p id="subTitle"></p>
+
+                </div>
+
+
+                <button id="newProspectButton" class="primary-button">
+
+                    <i class="fa-solid fa-plus"></i>
+
+                    Nuevo prospecto
+
+                </button>
+
+                <div id="prospectModal" class="prospect-modal">
+
+                    <div class="prospect-modal-content">
+
+                        <div class="prospect-modal-header">
+
+                            <div>
+                                <h2>Nuevo prospecto</h2>
+                                <p>Ingresa la información del cliente.</p>
+                            </div>
+
+                            <button id="closeProspectButton" type="button" class="modal-close">
+
+                                <i class="fa-solid fa-xmark"></i>
+
+                            </button>
+                        </div>
+
+
+
+                        <form id="prospectForm">
+
+                            <!-- ================================================ -->
+                            <!-- 1. INFORMACIÓN BÁSICA DEL CLIENTE -->
+                            <!-- ================================================ -->
+
+                            <div class="form-section">
+                                <h3>1. Información del cliente</h3>
+
+                                <div class="form-grid">
+
+                                    <div class="form-group">
+                                        <label for="prospectFirstName">Nombre *</label>
+                                        <input
+                                            type="text"
+                                            id="prospectFirstName"
+                                            placeholder="Nombre del cliente"
+                                            autocomplete="given-name"
+                                            required
+                                        >
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="prospectLastName">Apellido</label>
+                                        <input
+                                            type="text"
+                                            id="prospectLastName"
+                                            placeholder="Apellido del cliente"
+                                            autocomplete="family-name"
+                                        >
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="prospectBusiness">Empresa</label>
+                                        <input
+                                            type="text"
+                                            id="prospectBusiness"
+                                            placeholder="Nombre de la empresa"
+                                            autocomplete="organization"
+                                        >
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="prospectType">Tipo de prospecto</label>
+                                        <select id="prospectType">
+                                            <option value="">Seleccionar</option>
+                                            <option value="individual">Persona</option>
+                                            <option value="business">Empresa</option>
+                                            <option value="organization">Organización</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="prospectPhone">Teléfono *</label>
+                                        <input
+                                            type="tel"
+                                            id="prospectPhone"
+                                            placeholder="Número de teléfono"
+                                            autocomplete="tel"
+                                            required
+                                        >
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="prospectEmail">Correo electrónico</label>
+                                        <input
+                                            type="email"
+                                            id="prospectEmail"
+                                            placeholder="cliente@email.com"
+                                            autocomplete="email"
+                                        >
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="prospectPreferredContact">
+                                            Preferencia de contacto
+                                        </label>
+                                        <select id="prospectPreferredContact">
+                                            <option value="">Seleccionar</option>
+                                            <option value="phone">Teléfono</option>
+                                            <option value="email">Correo electrónico</option>
+                                            <option value="whatsapp">WhatsApp</option>
+                                            <option value="text">Mensaje de texto</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="prospectContact">
+                                            Medio de contacto inicial
+                                        </label>
+                                        <select id="prospectContact">
+                                            <option value="">Seleccionar</option>
+                                            <option value="phone">Teléfono</option>
+                                            <option value="email">Correo electrónico</option>
+                                            <option value="whatsapp">WhatsApp</option>
+                                            <option value="website">Sitio web</option>
+                                            <option value="referral">Referido</option>
+                                            <option value="walkin">Visita directa</option>
+                                            <option value="other">Otro</option>
+                                        </select>
+                                    </div>
+
+                                </div>
+                            </div>
+
+
+                            <!-- ================================================ -->
+                            <!-- 2. INFORMACIÓN FISCAL -->
+                            <!-- ================================================ -->
+
+                            <div class="form-section">
+                                <h3>2. Información fiscal</h3>
+
+                                <div class="form-grid">
+
+                                    <div class="form-group">
+                                        <label for="detailTaxpayerType">Tipo de persona</label>
+                                        <select id="detailTaxpayerType" name="TaxpayerType">
+                                            <option value="">Seleccionar</option>
+                                            <option value="Persona física">Persona física</option>
+                                            <option value="Persona moral">Persona moral</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="detailFiscalRFC">RFC</label>
+                                        <input
+                                            type="text"
+                                            id="detailFiscalRFC"
+                                            name="RFC"
+                                            placeholder="RFC del contribuyente"
+                                            maxlength="13"
+                                            autocomplete="off"
+                                            style="text-transform: uppercase;"
+                                        >
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="detailCURP">CURP</label>
+                                        <input
+                                            type="text"
+                                            id="detailCURP"
+                                            name="CURP"
+                                            placeholder="CURP de la persona física"
+                                            maxlength="18"
+                                            autocomplete="off"
+                                            style="text-transform: uppercase;"
+                                        >
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="detailTaxRegime">Régimen fiscal</label>
+                                        <select id="detailTaxRegime" name="TaxRegime">
+                                            <option value="">Seleccionar régimen</option>
+                                            <option value="601">601 - General de Ley Personas Morales</option>
+                                            <option value="603">603 - Personas Morales con Fines no Lucrativos</option>
+                                            <option value="605">605 - Sueldos y Salarios</option>
+                                            <option value="606">606 - Arrendamiento</option>
+                                            <option value="607">607 - Enajenación o Adquisición de Bienes</option>
+                                            <option value="608">608 - Demás ingresos</option>
+                                            <option value="610">610 - Residentes en el Extranjero</option>
+                                            <option value="611">611 - Ingresos por Dividendos</option>
+                                            <option value="612">612 - Actividades Empresariales y Profesionales</option>
+                                            <option value="614">614 - Ingresos por intereses</option>
+                                            <option value="615">615 - Obtención de premios</option>
+                                            <option value="616">616 - Sin obligaciones fiscales</option>
+                                            <option value="620">620 - Sociedades Cooperativas de Producción</option>
+                                            <option value="621">621 - Incorporación Fiscal</option>
+                                            <option value="622">622 - Actividades Agrícolas, Ganaderas, Silvícolas y Pesqueras</option>
+                                            <option value="623">623 - Opcional para Grupos de Sociedades</option>
+                                            <option value="624">624 - Coordinados</option>
+                                            <option value="625">625 - Plataformas Tecnológicas</option>
+                                            <option value="626">626 - Régimen Simplificado de Confianza (RESICO)</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="detailEconomicActivity">
+                                            Actividad económica
+                                        </label>
+                                        <input
+                                            type="text"
+                                            id="detailEconomicActivity"
+                                            name="EconomicActivity"
+                                            placeholder="Ej. Servicios profesionales"
+                                        >
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="detailCFDIUsage">Uso habitual de CFDI</label>
+                                        <select id="detailCFDIUsage" name="CFDIUsage">
+                                            <option value="">Seleccionar uso de CFDI</option>
+                                            <option value="G01">G01 - Adquisición de mercancías</option>
+                                            <option value="G02">G02 - Devoluciones, descuentos o bonificaciones</option>
+                                            <option value="G03">G03 - Gastos en general</option>
+                                            <option value="I01">I01 - Construcciones</option>
+                                            <option value="I02">I02 - Mobiliario y equipo de oficina</option>
+                                            <option value="I03">I03 - Equipo de transporte</option>
+                                            <option value="I04">I04 - Equipo de cómputo</option>
+                                            <option value="I08">I08 - Otra maquinaria y equipo</option>
+                                            <option value="D01">D01 - Honorarios médicos y gastos hospitalarios</option>
+                                            <option value="D02">D02 - Gastos médicos por incapacidad o discapacidad</option>
+                                            <option value="D04">D04 - Donativos</option>
+                                            <option value="D05">D05 - Intereses reales efectivamente pagados</option>
+                                            <option value="D07">D07 - Primas por seguros de gastos médicos</option>
+                                            <option value="D08">D08 - Transportación escolar obligatoria</option>
+                                            <option value="D10">D10 - Servicios educativos</option>
+                                            <option value="S01">S01 - Sin efectos fiscales</option>
+                                            <option value="CP01">CP01 - Pagos</option>
+                                            <option value="CN01">CN01 - Nómina</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="detailClientStartDate">
+                                            Fecha de alta del cliente
+                                        </label>
+                                        <input
+                                            type="date"
+                                            id="detailClientStartDate"
+                                            name="ClientStartDate"
+                                        >
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="detailFiscalReviewDate">
+                                            Última revisión fiscal
+                                        </label>
+                                        <input
+                                            type="date"
+                                            id="detailFiscalReviewDate"
+                                            name="FiscalReviewDate"
+                                        >
+                                    </div>
+
+                                </div>
+                            </div>
+
+
+                            <!-- ================================================ -->
+                            <!-- 3. OPORTUNIDAD Y SERVICIOS -->
+                            <!-- ================================================ -->
+
+                            <div class="form-section">
+                                <h3>3. Oportunidad y servicios</h3>
+
+                                <div class="form-grid">
+
+                                    <div class="form-group">
+                                        <label for="prospectService">Servicio de interés</label>
+                                        <select id="prospectService">
+                                            <option value="">Seleccionar servicio</option>
+                                            <option value="accounting">Contabilidad</option>
+                                            <option value="automotive">Automotriz</option>
+                                            <option value="beauty">Belleza</option>
+                                            <option value="cleaning">Limpieza</option>
+                                            <option value="construction">Construcción</option>
+                                            <option value="consultants">Consultoría</option>
+                                            <option value="education">Educación</option>
+                                            <option value="electrical">Electricidad</option>
+                                            <option value="hvac">HVAC</option>
+                                            <option value="handyman">Handyman</option>
+                                            <option value="independent">Profesional independiente</option>
+                                            <option value="inspections">Inspecciones</option>
+                                            <option value="law">Servicios legales</option>
+                                            <option value="painting">Pintura</option>
+                                            <option value="plumbing">Plomería</option>
+                                            <option value="realestate">Bienes raíces</option>
+                                            <option value="remodeling">Remodelación</option>
+                                            <option value="retail">Comercio / Retail</option>
+                                            <option value="roofing">Techado</option>
+                                            <option value="specialized">Servicios especializados</option>
+                                            <option value="technology">Tecnología</option>
+                                            <option value="other">Otro</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="prospectStatus">Estado</label>
+                                        <select id="prospectStatus">
+                                            <option value="new">Nuevo</option>
+                                            <option value="contacted">Contactado</option>
+                                            <option value="qualified">Calificado</option>
+                                            <option value="proposal">Propuesta enviada</option>
+                                            <option value="won">Cliente ganado</option>
+                                            <option value="lost">Perdido</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="prospectPriority">Prioridad</label>
+                                        <select id="prospectPriority">
+                                            <option value="normal">Normal</option>
+                                            <option value="low">Baja</option>
+                                            <option value="high">Alta</option>
+                                            <option value="urgent">Urgente</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="prospectValue">Valor estimado</label>
+                                        <input
+                                            type="number"
+                                            id="prospectValue"
+                                            placeholder="0.00"
+                                            min="0"
+                                            step="0.01"
+                                        >
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="prospectCloseDate">
+                                            Fecha estimada de cierre
+                                        </label>
+                                        <input type="date" id="prospectCloseDate">
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="prospectSource">Fuente del prospecto</label>
+                                        <select id="prospectSource">
+                                            <option value="">Seleccionar fuente</option>
+                                            <option value="website">Sitio web</option>
+                                            <option value="google">Google</option>
+                                            <option value="facebook">Facebook</option>
+                                            <option value="instagram">Instagram</option>
+                                            <option value="whatsapp">WhatsApp</option>
+                                            <option value="referral">Referido</option>
+                                            <option value="advertising">Publicidad</option>
+                                            <option value="walkin">Visita directa</option>
+                                            <option value="phone">Llamada</option>
+                                            <option value="existing_customer">Cliente existente</option>
+                                            <option value="other">Otro</option>
+                                        </select>
+                                    </div>
+
+                                </div>
+                            </div>
+
+
+                            <!-- ================================================ -->
+                            <!-- 4. INFORMACIÓN OPERATIVA CONTABLE -->
+                            <!-- ================================================ -->
+
+                            <div class="form-section">
+
+                                <h3>4. Información operativa contable</h3>
+
+                                <div class="form-grid">
+
+                                    <!-- Registered legal name -->
+                                    <div class="form-group">
+                                        <label for="prospectLegalName">
+                                            Nombre o razón social
+                                        </label>
+
+                                        <input
+                                            type="text"
+                                            id="prospectLegalName"
+                                            name="LegalName"
+                                            placeholder="Nombre fiscal registrado"
+                                        >
+                                    </div>
+
+                                    <!-- Billing email -->
+                                    <div class="form-group">
+                                        <label for="prospectBillingEmail">
+                                            Correo para facturación
+                                        </label>
+
+                                        <input
+                                            type="email"
+                                            id="prospectBillingEmail"
+                                            name="BillingEmail"
+                                            placeholder="facturacion@empresa.com"
+                                        >
+                                    </div>
+
+                                    <!-- Accounting frequency -->
+                                    <div class="form-group">
+                                        <label for="prospectAccountingFrequency">
+                                            Periodicidad del servicio
+                                        </label>
+
+                                        <select
+                                            id="prospectAccountingFrequency"
+                                            name="AccountingFrequency"
+                                        >
+                                            <option value="">Seleccionar periodicidad</option>
+                                            <option value="monthly">Mensual</option>
+                                            <option value="bimonthly">Bimestral</option>
+                                            <option value="quarterly">Trimestral</option>
+                                            <option value="annual">Anual</option>
+                                            <option value="event_based">Por evento</option>
+                                        </select>
+                                    </div>
+
+                                    <!-- Service start date -->
+                                    <div class="form-group">
+                                        <label for="prospectServiceStartDate">
+                                            Fecha de inicio del servicio
+                                        </label>
+
+                                        <input
+                                            type="date"
+                                            id="prospectServiceStartDate"
+                                            name="ServiceStartDate"
+                                        >
+                                    </div>
+
+                                    <!-- Accounting fee -->
+                                    <div class="form-group">
+                                        <label for="prospectAccountingFee">
+                                            Honorarios acordados (MXN)
+                                        </label>
+
+                                        <input
+                                            type="number"
+                                            id="prospectAccountingFee"
+                                            name="AccountingFee"
+                                            min="0"
+                                            step="0.01"
+                                            placeholder="0.00"
+                                        >
+                                    </div>
+
+                                    <!-- Payroll -->
+                                    <div class="form-group">
+                                        <label for="prospectHasEmployees">
+                                            ¿Tiene empleados?
+                                        </label>
+
+                                        <select
+                                            id="prospectHasEmployees"
+                                            name="HasEmployees"
+                                        >
+                                            <option value="">Seleccionar</option>
+                                            <option value="yes">Sí</option>
+                                            <option value="no">No</option>
+                                            <option value="unknown">Por confirmar</option>
+                                        </select>
+                                    </div>
+
+                                    <!-- Invoice issuing -->
+                                    <div class="form-group">
+                                        <label for="prospectIssuesInvoices">
+                                            ¿Emite facturas?
+                                        </label>
+
+                                        <select
+                                            id="prospectIssuesInvoices"
+                                            name="IssuesInvoices"
+                                        >
+                                            <option value="">Seleccionar</option>
+                                            <option value="yes">Sí</option>
+                                            <option value="no">No</option>
+                                            <option value="unknown">Por confirmar</option>
+                                        </select>
+                                    </div>
+
+                                    <!-- Invoice receiving -->
+                                    <div class="form-group">
+                                        <label for="prospectReceivesInvoices">
+                                            ¿Recibe facturas?
+                                        </label>
+
+                                        <select
+                                            id="prospectReceivesInvoices"
+                                            name="ReceivesInvoices"
+                                        >
+                                            <option value="">Seleccionar</option>
+                                            <option value="yes">Sí</option>
+                                            <option value="no">No</option>
+                                            <option value="unknown">Por confirmar</option>
+                                        </select>
+                                    </div>
+
+                                    <!-- e.firma status -->
+                                    <div class="form-group">
+                                        <label for="prospectEFirmaStatus">
+                                            Estado de e.firma
+                                        </label>
+
+                                        <select
+                                            id="prospectEFirmaStatus"
+                                            name="EFirmaStatus"
+                                        >
+                                            <option value="">Seleccionar</option>
+                                            <option value="valid">Vigente</option>
+                                            <option value="expired">Vencida</option>
+                                            <option value="pending">Pendiente de obtener</option>
+                                            <option value="unknown">Por confirmar</option>
+                                        </select>
+                                    </div>
+
+                                    <!-- e.firma expiration -->
+                                    <div class="form-group">
+                                        <label for="prospectEFirmaExpiration">
+                                            Vencimiento de e.firma
+                                        </label>
+
+                                        <input
+                                            type="date"
+                                            id="prospectEFirmaExpiration"
+                                            name="EFirmaExpiration"
+                                        >
+                                    </div>
+
+                                    <!-- Assigned accountant -->
+                                    <div class="form-group">
+                                        <label for="prospectAccountant">
+                                            Contador asignado
+                                        </label>
+
+                                        <select
+                                            id="prospectAccountant"
+                                            name="Accountant"
+                                        >
+                                            <option value="">Sin asignar</option>
+                                        </select>
+                                    </div>
+
+                                    <!-- Contract status -->
+                                    <div class="form-group">
+                                        <label for="prospectContractStatus">
+                                            Estado del contrato
+                                        </label>
+
+                                        <select
+                                            id="prospectContractStatus"
+                                            name="ContractStatus"
+                                        >
+                                            <option value="">Seleccionar</option>
+                                            <option value="not_started">No iniciado</option>
+                                            <option value="pending">Pendiente de firma</option>
+                                            <option value="signed">Firmado</option>
+                                            <option value="expired">Vencido</option>
+                                        </select>
+                                    </div>
+
+                                </div>
+                            </div>
+
+
+                            <!-- ================================================ -->
+                            <!-- 5. SEGUIMIENTO Y RESPONSABLE -->
+                            <!-- ================================================ -->
+
+                            <div class="form-section">
+                                <h3>5. Seguimiento y responsable</h3>
+
+                                <div class="form-grid">
+
+                                    <div class="form-group">
+                                        <label for="prospectFollowUp">Próximo seguimiento</label>
+                                        <input type="datetime-local" id="prospectFollowUp">
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="prospectAssignedTo">Responsable</label>
+                                        <select id="prospectAssignedTo">
+                                            <option value="">Sin asignar</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="prospectLastContact">Último contacto</label>
+                                        <input type="datetime-local" id="prospectLastContact">
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="prospectNextAction">Próxima acción</label>
+                                        <select id="prospectNextAction">
+                                            <option value="">Seleccionar acción</option>
+                                            <option value="call">Llamar</option>
+                                            <option value="email">Enviar correo</option>
+                                            <option value="whatsapp">Enviar WhatsApp</option>
+                                            <option value="meeting">Agendar reunión</option>
+                                            <option value="proposal">Enviar propuesta</option>
+                                            <option value="followup">Dar seguimiento</option>
+                                            <option value="none">Sin acción</option>
+                                        </select>
+                                    </div>
+
+                                </div>
+                            </div>
+
+
+                            <!-- ================================================ -->
+                            <!-- 6. DIRECCIÓN -->
+                            <!-- ================================================ -->
+
+                            <div class="form-section">
+                                <h3>6. Ubicación</h3>
+
+                                <div class="form-grid">
+
+                                    <div class="form-group full-width">
+                                        <label for="prospectAddress">Dirección</label>
+                                        <input
+                                            type="text"
+                                            id="prospectAddress"
+                                            placeholder="Calle y número"
+                                            autocomplete="street-address"
+                                        >
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="prospectCity">Ciudad</label>
+                                        <input
+                                            type="text"
+                                            id="prospectCity"
+                                            placeholder="Ciudad"
+                                            autocomplete="address-level2"
+                                        >
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="prospectState">Estado</label>
+                                        <input
+                                            type="text"
+                                            id="prospectState"
+                                            placeholder="Estado"
+                                            autocomplete="address-level1"
+                                        >
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="prospectZip">Código postal</label>
+                                        <input
+                                            type="text"
+                                            id="prospectZip"
+                                            placeholder="Código postal"
+                                            autocomplete="postal-code"
+                                        >
+                                    </div>
+
+                                </div>
+                            </div>
+
+
+                            <!-- ================================================ -->
+                            <!-- 7. NOTAS -->
+                            <!-- ================================================ -->
+
+                            <div class="form-section">
+                                <h3>7. Notas adicionales</h3>
+
+                                <div class="form-grid">
+                                    <div class="form-group full-width">
+                                        <label for="prospectNotes">
+                                            Información importante
+                                        </label>
+                                        <textarea
+                                            id="prospectNotes"
+                                            rows="4"
+                                            placeholder="Necesidades del cliente, acuerdos, pendientes..."
+                                        ></textarea>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <!-- ================================================ -->
+                            <!-- ACCIONES -->
+                            <!-- ================================================ -->
+
+                            <div class="prospect-modal-actions">
+
+                                <button
+                                    id="cancelProspectButton"
+                                    type="button"
+                                    class="secondary-button"
+                                >
+                                    Cancelar
+                                </button>
+
+                                <button
+                                    type="submit"
+                                    class="primary-button"
+                                >
+                                    <i class="fa-solid fa-plus"></i>
+                                    Crear prospecto
+                                </button>
+
+                            </div>
+
+                        </form>
+
+
+
+
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- STATS -->
+
+            <div class="stats-grid">
+
+
+                <!-- ================================= -->
+                <!-- PROSPECTOS -->
+                <!-- ================================= -->
+
+                <div class="stat-card" id="statCard1" style="cursor: pointer;">
+
+                    <div class="stat-top">
+
+                        <div class="stat-icon blue">
+
+                            <i class="fa-solid fa-user-plus"></i>
+
+                        </div>
+
+                        <span
+                            class="stat-change positive"
+                            id="SCP1">
+                        </span>
+
+                    </div>
+
+                    <span
+                        class="stat-label"
+                        id="SL1">
+                    </span>
+
+                    <strong id="S1A">
+                    </strong>
+
+                    <small id="S1OA">
+                        vs. 20 el mes pasado
+                    </small>
+
+                </div>
+
+
+                <!-- ================================= -->
+                <!-- CLIENTES -->
+                <!-- ================================= -->
+
+                <div class="stat-card" id="statCard2" style="cursor: pointer;">
+
+                    <div class="stat-top">
+
+                        <div class="stat-icon green">
+
+                            <i class="fa-solid fa-users"></i>
+
+                        </div>
+
+                        <span class="stat-change positive">
+
+                            +6.2%
+
+                        </span>
+
+                    </div>
+
+                    <span class="stat-label">
+
+                        Clientes activos
+
+                    </span>
+
+                    <strong>
+
+                        86
+
+                    </strong>
+
+                    <small>
+
+                        5 nuevos este mes
+
+                    </small>
+
+                </div>
+
+
+                <!-- ================================= -->
+                <!-- TAREAS -->
+                <!-- ================================= -->
+
+                <div class="stat-card" id="statCard3" style="cursor: pointer;">
+
+                    <div class="stat-top">
+
+                        <div class="stat-icon orange">
+
+                            <i class="fa-solid fa-list-check"></i>
+
+                        </div>
+
+                        <span class="stat-change">
+
+                            Esta semana
+
+                        </span>
+
+                    </div>
+
+                    <span class="stat-label">
+
+                        Tareas pendientes
+
+                    </span>
+
+                    <strong>
+
+                        12
+
+                    </strong>
+
+                    <small>
+
+                        4 requieren atención
+
+                    </small>
+
+                </div>
+
+                            <div class="stat-card">
+
+                                <div class="stat-top">
+
+                                    <div class="stat-icon purple">
+
+                                        <i class="fa-solid fa-dollar-sign"></i>
+
+                                    </div>
+
+                                    <span class="stat-change positive">
+                                        +11.8%
+                                    </span>
+
+                                </div>
+
+                                <span class="stat-label">
+                                    Ingresos mensuales
+                                </span>
+
+                                <strong>
+                                    $184,500
+                                </strong>
+
+                                <small>
+                                    vs. $165,000 anterior
+                                </small>
+
+                            </div>
+            </div>
+
+
+
+            <!-- DASHBOARD GRID -->
+
+            <div class="dashboard-grid">
+
+
+                <!-- PIPELINE -->
+
+                <div class="panel pipeline-panel">
+
+                    <div class="panel-header">
+
+                        <div>
+
+                            <h2>
+                                Pipeline de prospectos
+                            </h2>
+
+                            <p>
+                                Seguimiento de oportunidades
+                            </p>
+
+                        </div>
+
+                        <button class="more-button">
+                            Ver todos
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+
+                    </div>
+
+
+                    <div class="pipeline">
+
+
+                        <div class="pipeline-column" id="PC1">
+
+                            <div class="pipeline-title">
+
+                                <span>
+                                    Nuevos
+                                </span>
+
+                                <b>
+                                    6
+                                </b>
+
+                            </div>
+
+
+                            <div class="lead-card">
+
+                                <div class="lead-avatar blue-bg">
+                                    JM
+                                </div>
+
+                                <div class="lead-info">
+
+                                    <strong>
+                                        José Martínez
+                                    </strong>
+
+                                    <span>
+                                        Contabilidad
+                                    </span>
+
+                                    <small>
+                                        Hace 2 horas
+                                    </small>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="lead-card">
+
+                                <div class="lead-avatar purple-bg">
+                                    AR
+                                </div>
+
+                                <div class="lead-info">
+
+                                    <strong>
+                                        Ana Rodríguez
+                                    </strong>
+
+                                    <span>
+                                        Impuestos
+                                    </span>
+
+                                    <small>
+                                        Ayer
+                                    </small>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <div class="pipeline-column" id="PC2">
+
+                            <div class="pipeline-title">
+
+                                <span>
+                                    Contactados
+                                </span>
+
+                                <b>
+                                    4
+                                </b>
+
+                            </div>
+
+
+                            <div class="lead-card">
+
+                                <div class="lead-avatar orange-bg">
+                                    LG
+                                </div>
+
+                                <div class="lead-info">
+
+                                    <strong>
+                                        Luis García
+                                    </strong>
+
+                                    <span>
+                                        Asesoría fiscal
+                                    </span>
+
+                                    <small>
+                                        Hace 1 día
+                                    </small>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="lead-card">
+
+                                <div class="lead-avatar green-bg">
+                                    MV
+                                </div>
+
+                                <div class="lead-info">
+
+                                    <strong>
+                                        María Vega
+                                    </strong>
+
+                                    <span>
+                                        Declaraciones
+                                    </span>
+
+                                    <small>
+                                        Hace 2 días
+                                    </small>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <div class="pipeline-column" id="PC3">
+
+                            <div class="pipeline-title">
+
+                                <span>
+                                    Propuesta
+                                </span>
+
+                                <b>
+                                    3
+                                </b>
+
+                            </div>
+
+                         
+                            <div  id="prospectList">
+                                <!-- Prospects will be rendered here -->
+                            </div>
+
+
+
+
+
+
+                        </div>
+
+
+
+                        <div class="pipeline-column" id="PC4">
+
+                            <div class="pipeline-title">
+
+                                <span>
+                                    Convertidos
+                                </span>
+
+                                <b>
+                                    11
+                                </b>
+
+                            </div>
+
+
+                            <div class="lead-card converted">
+
+                                <div class="lead-avatar green-bg">
+                                    RS
+                                </div>
+
+                                <div class="lead-info">
+
+                                    <strong>
+                                        Roberto Sánchez
+                                    </strong>
+
+                                    <span>
+                                        Contabilidad mensual
+                                    </span>
+
+                                    <small>
+                                        Cliente
+                                    </small>
+
+                                </div>
+
+                                <i class="fa-solid fa-circle-check"></i>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- TASKS -->
+
+                <div class="panel">
+
+                    <div class="panel-header">
+
+                        <div>
+
+                            <h2>
+                                Tareas de hoy
+                            </h2>
+
+                            <p>
+                                4 tareas pendientes
+                            </p>
+
+                        </div>
+
+                        <button class="more-button">
+                            Ver todas
+                        </button>
+
+                    </div>
+
+
+                    <div class="task-list">
+
+
+                        <div class="task">
+
+                            <div class="task-check"></div>
+
+                            <div class="task-content">
+
+                                <strong>
+                                    Preparar declaración
+                                </strong>
+
+                                <span>
+                                    María López
+                                </span>
+
+                            </div>
+
+                            <time>
+                                10:00
+                            </time>
+
+                        </div>
+
+
+                        <div class="task">
+
+                            <div class="task-check"></div>
+
+                            <div class="task-content">
+
+                                <strong>
+                                    Llamar a prospecto
+                                </strong>
+
+                                <span>
+                                    José Martínez
+                                </span>
+
+                            </div>
+
+                            <time>
+                                11:30
+                            </time>
+
+                        </div>
+
+
+                        <div class="task urgent">
+
+                            <div class="task-check"></div>
+
+                            <div class="task-content">
+
+                                <strong>
+                                    Revisar documentos
+                                </strong>
+
+                                <span>
+                                    Grupo Constructivo MX
+                                </span>
+
+                            </div>
+
+                            <time>
+                                14:00
+                            </time>
+
+                        </div>
+
+
+                        <div class="task">
+
+                            <div class="task-check"></div>
+
+                            <div class="task-content">
+
+                                <strong>
+                                    Enviar propuesta
+                                </strong>
+
+                                <span>
+                                    Carlos Pérez
+                                </span>
+
+                            </div>
+
+                            <time>
+                                16:00
+                            </time>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- RECENT CLIENTS -->
+
+            <div class="panel">
+
+                <div class="panel-header">
+
+                    <div>
+
+                        <h2>
+                            Clientes recientes
+                        </h2>
+
+                        <p>
+                            Últimos clientes registrados
+                        </p>
+
+                    </div>
+
+                    <button class="more-button">
+                        Ver clientes
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+
+                </div>
+
+
+                <div class="table-wrapper">
+
+                    <table>
+
+                        <thead>
+
+                            <tr>
+
+                                <th>
+                                    CLIENTE
+                                </th>
+
+                                <th>
+                                    SERVICIO
+                                </th>
+
+                                <th>
+                                    ESTADO
+                                </th>
+
+                                <th>
+                                    PRÓXIMO VENCIMIENTO
+                                </th>
+
+                                <th>
+                                    RESPONSABLE
+                                </th>
+
+                                <th></th>
+
+                            </tr>
+
+                        </thead>
+
+
+                        <tbody>
+
+                            <tr>
+
+                                <td>
+
+                                    <div class="table-user">
+
+                                        <div class="avatar green-bg">
+                                            RM
+                                        </div>
+
+                                        <div>
+
+                                            <strong>
+                                                Roberto Martínez
+                                            </strong>
+
+                                            <span>
+                                                roberto@email.com
+                                            </span>
+
+                                        </div>
+
+                                    </div>
+
+                                </td>
+
+                                <td>
+                                    Contabilidad mensual
+                                </td>
+
+                                <td>
+                                    <span class="status active">
+                                        Activo
+                                    </span>
+                                </td>
+
+                                <td>
+                                    30 Sep 2026
+                                </td>
+
+                                <td>
+                                    Carlos M.
+                                </td>
+
+                                <td>
+                                    <button class="row-menu">
+                                        <i class="fa-solid fa-ellipsis"></i>
+                                    </button>
+                                </td>
+
+                            </tr>
+
+
+                            <tr>
+
+                                <td>
+
+                                    <div class="table-user">
+
+                                        <div class="avatar blue-bg">
+                                            ML
+                                        </div>
+
+                                        <div>
+
+                                            <strong>
+                                                María López
+                                            </strong>
+
+                                            <span>
+                                                maria@email.com
+                                            </span>
+
+                                        </div>
+
+                                    </div>
+
+                                </td>
+
+                                <td>
+                                    Impuestos
+                                </td>
+
+                                <td>
+                                    <span class="status active">
+                                        Activo
+                                    </span>
+                                </td>
+
+                                <td>
+                                    30 Sep 2026
+                                </td>
+
+                                <td>
+                                    Ana R.
+                                </td>
+
+                                <td>
+                                    <button class="row-menu">
+                                        <i class="fa-solid fa-ellipsis"></i>
+                                    </button>
+                                </td>
+
+                            </tr>
+
+
+                            <tr>
+
+                                <td>
+
+                                    <div class="table-user">
+
+                                        <div class="avatar orange-bg">
+                                            GC
+                                        </div>
+
+                                        <div>
+
+                                            <strong>
+                                                Grupo Constructivo MX
+                                            </strong>
+
+                                            <span>
+                                                contacto@gcmx.com
+                                            </span>
+
+                                        </div>
+
+                                    </div>
+
+                                </td>
+
+                                <td>
+                                    Contabilidad empresarial
+                                </td>
+
+                                <td>
+                                    <span class="status warning">
+                                        Pendiente
+                                    </span>
+                                </td>
+
+                                <td>
+                                    2 Oct 2026
+                                </td>
+
+                                <td>
+                                    Carlos M.
+                                </td>
+
+                                <td>
+                                    <button class="row-menu">
+                                        <i class="fa-solid fa-ellipsis"></i>
+                                    </button>
+                                </td>
+
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================
+             OTHER PAGES
+        ================================= -->
+
+        <section class="page" id="prospectos">
+
+            <div class="page-header">
+
+                <div>
+                    <div class="breadcrumb" id="breadcrumbprospect"></div>
+                    <h1 id="H1prospect"></h1>
+                    <p id="Pprospect"></p>
+                </div>
+
+                <button class="primary-button">
+                    <i class="fa-solid fa-plus"></i>
+                    <span id="ee"></span>
+                </button>
+
+            </div>
+
+
+            <div class="filter-bar">
+
+                <div class="search-table">
+
+                    <i class="fa-solid fa-magnifying-glass"></i>
+
+                    <input
+                        id="searchProspect"
+                        type="text"
+                        placeholder=""
+                    >
+
+                </div>
+
+
+                <select id="prospectStatusFilter">
+                    <option id="O1"></option>
+                    <option id="O2"></option>
+                    <option id="O3"></option>
+                    <option id="O4"></option>
+                    <option id="O5"></option>
+                    <option id="O6"></option>
+                    <option id="O7"></option>
+                    <option id="O8"></option>
+                </select>
+
+                <button class="secondary-button">
+                    <i class="fa-solid fa-filter"></i>
+                    <span id="filterBtn"></span>
+                </button>
+
+
+                <div class="multi-select" id="layoutfilter">
+
+                    <button type="button"
+                            class="multi-select-button"
+                            id="layoutfilterButton">
+
+                        <span id="layoutfilterText">Mostrar columnas</span>
+
+                        <i class="fa-solid fa-chevron-down"></i>
+
+                    </button>
+
+
+                    <div class="multi-select-menu" id="layoutfilterMenu">
+
+                        <label>
+                            <input type="checkbox" id="OL1">
+                            <span id="OLT1"></span>
+                        </label>
+
+                        <label>
+                            <input type="checkbox" id="OL2">
+                            <span id="OLT2"></span>
+                        </label>
+
+                        <label>
+                            <input type="checkbox" id="OL3">
+                            <span id="OLT3"></span>
+                        </label>
+
+                        <label>
+                            <input type="checkbox" id="OL4">
+                            <span id="OLT4"></span>
+                        </label>
+
+                        <label>
+                            <input type="checkbox" id="OL5">
+                            <span id="OLT5"></span>
+                        </label>
+
+                        <label>
+                            <input type="checkbox" id="OL6">
+                            <span id="OLT6"></span>
+                        </label>
+
+                        <label>
+                            <input type="checkbox" id="OL7">
+                            <span id="OLT7"></span>
+                        </label>
+
+                        <label>
+                            <input type="checkbox" id="OL8">
+                            <span id="OLT8"></span>
+                        </label>
+
+                        <label>
+                            <input type="checkbox" id="OL9">
+                            <span id="OLT9"></span>
+                        </label>
+
+                        <label>
+                            <input type="checkbox" id="OL10">
+                            <span id="OLT10"></span>
+                        </label>
+
+                        <label>
+                            <input type="checkbox" id="OL11">
+                            <span id="OLT11"></span>
+                        </label>
+
+                        <label>
+                            <input type="checkbox" id="OL12">
+                            <span id="OLT12"></span>
+                        </label>
+
+                        <label>
+                            <input type="checkbox" id="OL13">
+                            <span id="OLT13"></span>
+                        </label>
+
+                        <label>
+                            <input type="checkbox" id="OL14">
+                            <span id="OLT14"></span>
+                        </label>
+
+                        <label>
+                            <input type="checkbox" id="OL15">
+                            <span id="OLT15"></span>
+                        </label>
+
+                        <label>
+                            <input type="checkbox" id="OL16">
+                            <span id="OLT16"></span>
+                        </label>
+
+                        <label>
+                            <input type="checkbox" id="OL17">
+                            <span id="OLT17"></span>
+                        </label>
+
+                        <label>
+                            <input type="checkbox" id="OL18">
+                            <span id="OLT18"></span>
+                        </label>
+
+                        <label>
+                            <input type="checkbox" id="OL19">
+                            <span id="OLT19"></span>
+                        </label>
+
+                        <label>
+                            <input type="checkbox" id="OL20">
+                            <span id="OLT20"></span>
+                        </label>
+
+                        <label>
+                            <input type="checkbox" id="OL21">
+                            <span id="OLT21"></span>
+                        </label>
+
+                        <label>
+                            <input type="checkbox" id="OL22">
+                            <span id="OLT22"></span>
+                        </label>
+
+                        <label>
+                            <input type="checkbox" id="OL23">
+                            <span id="OLT23"></span>
+                        </label>
+
+                        <label>
+                            <input type="checkbox" id="OL24">
+                            <span id="OLT24"></span>
+                        </label>
+
+                        <label>
+                            <input type="checkbox" id="OL25">
+                            <span id="OLT25"></span>
+                        </label>
+
+                        <label>
+                            <input type="checkbox" id="OL26">
+                            <span id="OLT26"></span>
+                        </label>
+
+                        <label>
+                            <input type="checkbox" id="OL27">
+                            <span id="OLT27"></span>
+                        </label>
+
+                        <label>
+                            <input type="checkbox" id="OL28">
+                            <span id="OLT28"></span>
+                        </label>
+
+                        <label>
+                            <input type="checkbox" id="OL29">
+                            <span id="OLT29"></span>
+                        </label>
+
+                        <label>
+                            <input type="checkbox" id="OL30">
+                            <span id="OLT30"></span>
+                        </label>
+
+                        <label>
+                            <input type="checkbox" id="OL31">
+                            <span id="OLT31"></span>
+                        </label>
+
+                        <label>
+                            <input type="checkbox" id="OL32">
+                            <span id="OLT32"></span>
+                        </label>
+
+                        <label>
+                            <input type="checkbox" id="OL33">
+                            <span id="OLT33"></span>
+                        </label>
+
+                        <label>
+                            <input type="checkbox" id="OL34">
+                            <span id="OLT34"></span>
+                        </label>
+
+                    </div>
+
+                </div>
+
+
+
+
+
+
+
+
+
+            </div>
+
+
+            <div class="panel">
+
+                <div class="table-wrapper">
+
+                    <table>
+
+                        <thead>
+
+                            <tr>
+
+                                <th id="th1">PROSPECTO</th>
+                                <th id="th2">SERVICIO</th>
+                                <th id="th3">FUENTE</th>
+                                <th id="th4">ESTADO</th>
+                                <th id="th5">ÚLTIMO CONTACTO</th>
+                                <th id="th6">RESPONSABLE</th>
+                                <th id="th7">PHONE</th>
+                                <th id="th8">EMAIL</th>
+                                <th id="th9">STATUS</th>
+                                <th id="th10">LAST ACTIVITY</th>
+                                <th id="th11">ASSIGNED TO</th>
+                                <th id="th12">ACTIONS</th>
+                                <th id="th13">DOCUMENT</th>
+                                <th id="th14">TYPE</th>
+                                <th id="th15">DATE</th>
+                                <th id="th16">UPLOADED BY</th>
+                                <th id="th17">DESCRIPTION</th>
+                                <th id="th18">PRICE</th>
+                                <th id="th19">CREATED</th>
+                                <th id="th20">TASK</th>
+                                <th id="th21">DUE DATE</th>
+                                <th id="th22">PRIORITY</th>
+                                <th id="th23">APPOINTMENT</th>
+                                <th id="th24">SERVICE</th>
+                                <th id="th25">AMOUNT</th>
+                                <th id="th26">PAYMENT METHOD</th>
+                                <th id="th27">REFERENCE</th>
+                                <th id="th28">INVOICE</th>
+                                <th id="th29">CLIENT</th>
+                                <th id="th30">ISSUE DATE</th>
+                                <th id="th31">TOTAL</th>
+                                <th id="th32">NAME</th>
+                                <th id="th33">ROLE</th>
+                                <th id="th34"></th>
+
+                            </tr>
+
+                        </thead>
+
+
+                        <tbody>
+
+                            <tr>
+
+                                <td>
+                                    <div class="table-user">
+
+                                        <div class="avatar blue-bg">
+                                            JM
+                                        </div>
+
+                                        <div>
+
+                                            <strong>
+                                                José Martínez
+                                            </strong>
+
+                                            <span>
+                                                jose@email.com
+                                            </span>
+
+                                        </div>
+
+                                    </div>
+                                </td>
+
+                                <td>
+                                    Contabilidad
+                                </td>
+
+                                <td>
+                                    Sitio web
+                                </td>
+
+                                <td>
+                                    <span class="status new">
+                                        Nuevo
+                                    </span>
+                                </td>
+
+                                <td>
+                                    Hoy
+                                </td>
+
+                                <td>
+                                    Carlos M.
+                                </td>
+
+                                <td>
+                                    <button class="row-menu">
+                                        <i class="fa-solid fa-ellipsis"></i>
+                                    </button>
+                                </td>
+
+                            </tr>
+
+
+                            <tr>
+
+                                <td>
+
+                                    <div class="table-user">
+
+                                        <div class="avatar purple-bg">
+                                            AR
+                                        </div>
+
+                                        <div>
+
+                                            <strong>
+                                                Ana Rodríguez
+                                            </strong>
+
+                                            <span>
+                                                ana@email.com
+                                            </span>
+
+                                        </div>
+
+                                    </div>
+
+                                </td>
+
+                                <td>
+                                    Impuestos
+                                </td>
+
+                                <td>
+                                    WhatsApp
+                                </td>
+
+                                <td>
+                                    <span class="status contacted">
+                                        Contactado
+                                    </span>
+                                </td>
+
+                                <td>
+                                    Ayer
+                                </td>
+
+                                <td>
+                                    Ana R.
+                                </td>
+
+                                <td>
+                                    <button class="row-menu">
+                                        <i class="fa-solid fa-ellipsis"></i>
+                                    </button>
+                                </td>
+
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section class="prospect-detail-modal" id="prospectDetailModal">
+
+    <div class="prospect-detail-overlay"></div>
+
+    <div class="prospect-detail">
+
+        <!-- HEADER -->
+        <div class="prospect-detail-header">
+
+            <div class="prospect-detail-person">
+
+                <div class="prospect-detail-avatar" id="detailAvatar">--</div>
+
+                <div>
+                    <div class="prospect-detail-name-row">
+                        <h2 id="detailFullName">Cliente</h2>
+                        <span class="prospect-status" id="detailStatus">Nuevo</span>
+                    </div>
+
+                    <p id="detailBusinessName">-</p>
+
+                    <div class="prospect-header-meta">
+                        <span id="detailProspectId"></span>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="prospect-detail-actions">
+
+                <button type="button" id="detailCallButton" title="Llamar">
+                    <i class="fa-solid fa-phone"></i>
+                </button>
+
+                <button type="button" id="detailEmailButton" title="Correo">
+                    <i class="fa-regular fa-envelope"></i>
+                </button>
+
+                <button type="button" id="detailWhatsAppButton" title="WhatsApp">
+                    <i class="fa-brands fa-whatsapp"></i>
+                </button>
+
+                <button type="button" id="detailTaskButton" title="Nueva tarea">
+                    <i class="fa-solid fa-list-check"></i>
+                </button>
+
+                <button type="button" id="detailAppointmentButton" title="Nueva cita">
+                    <i class="fa-solid fa-calendar-plus"></i>
+                </button>
+
+                <button type="button" id="editProspectButton">
+                    <i class="fa-solid fa-pen"></i>
+                    Editar
+                </button>
+
+                <button type="button" id="saveProspectButton" style="display:none;">
+                    <i class="fa-solid fa-floppy-disk"></i>
+                    Guardar cambios
+                </button>
+
+                <button type="button" id="cancelEditProspectButton" style="display:none;">
+                    <i class="fa-solid fa-xmark"></i>
+                    Cancelar
+                </button>
+
+                <button type="button" id="closeProspectDetail">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+
+            </div>
+        </div>
+
+        <!-- BODY -->
+        <div class="prospect-detail-body">
+
+            <!-- MAIN CONTENT -->
+            <div class="prospect-detail-main">
+
+                <!-- QUICK ACTIONS -->
+                <div class="prospect-info-card prospect-quick-actions">
+                    <div class="prospect-action-buttons">
+
+                        <button type="button" id="quickAddTask">
+                            <i class="fa-solid fa-list-check"></i>
+                            Nueva tarea
+                        </button>
+
+                        <button type="button" id="quickAddAppointment">
+                            <i class="fa-solid fa-calendar-plus"></i>
+                            Nueva cita
+                        </button>
+
+                        <button type="button" id="quickSendEmail">
+                            <i class="fa-regular fa-envelope"></i>
+                            Enviar correo
+                        </button>
+
+                        <button type="button" id="quickAddNote">
+                            <i class="fa-regular fa-note-sticky"></i>
+                            Agregar nota
+                        </button>
+
+                        <button type="button" id="quickUploadDocument">
+                            <i class="fa-solid fa-file-arrow-up"></i>
+                            Documento
+                        </button>
+
+                    </div>
+                </div>
+
+                <!-- CUSTOMER INFORMATION -->
+                <div class="prospect-info-card">
+
+                    <div class="prospect-section-title">
+                        <div>
+                            <h3>Información del cliente</h3>
+                            <p>Información de contacto y ubicación.</p>
+                        </div>
+                    </div>
+
+                    <div class="prospect-info-grid">
+
+                        <div class="prospect-info-item">
+                            <span>Nombre</span>
+                            <strong id="detailName">-</strong>
+                        </div>
+
+                        <div class="prospect-info-item">
+                            <span>Empresa</span>
+                            <strong id="detailCompany">-</strong>
+                        </div>
+
+                        <div class="prospect-info-item">
+                            <span>Tipo de prospecto</span>
+                            <strong id="detailProspectType">-</strong>
+                        </div>
+
+                        <div class="prospect-info-item">
+                            <span>Teléfono</span>
+                            <strong id="detailPhone">-</strong>
+                        </div>
+
+                        <div class="prospect-info-item">
+                            <span>Correo electrónico</span>
+                            <strong id="detailEmail">-</strong>
+                        </div>
+
+                        <div class="prospect-info-item">
+                            <span>WhatsApp</span>
+                            <strong id="detailWhatsApp">-</strong>
+                        </div>
+
+                        <div class="prospect-info-item">
+                            <span>Preferencia de contacto</span>
+                            <strong id="detailPreferredContact">-</strong>
+                        </div>
+
+                        <div class="prospect-info-item">
+                            <span>Medio de contacto inicial</span>
+                            <strong id="detailInitialContact">-</strong>
+                        </div>
+
+                        <div class="prospect-info-item">
+                            <span>Ciudad</span>
+                            <strong id="detailCity">-</strong>
+                        </div>
+
+                        <div class="prospect-info-item">
+                            <span>Estado</span>
+                            <strong id="detailState">-</strong>
+                        </div>
+
+                        <div class="prospect-info-item">
+                            <span>Dirección</span>
+                            <strong id="detailAddress">-</strong>
+                        </div>
+
+                        <div class="prospect-info-item">
+                            <span>Código postal</span>
+                            <strong id="detailZipCode">-</strong>
+                        </div>
+
+                        <div class="prospect-info-item">
+                            <span>RFC</span>
+                            <strong id="detailRFC">-</strong>
+                        </div>
+
+                        <div class="prospect-info-item">
+                            <span>Estado del cliente</span>
+                            <strong id="detailClientStatus">-</strong>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- FISCAL INFORMATION -->
+                <div class="prospect-info-card" id="Accounting-Block-1">
+
+                    <div class="prospect-section-title">
+                        <div>
+                            <h3>Información fiscal</h3>
+                            <p>Datos fiscales registrados del contribuyente.</p>
+                        </div>
+                    </div>
+
+                    <div class="prospect-info-grid">
+
+                        <div class="prospect-info-item">
+                            <span>Tipo de persona</span>
+                            <strong id="DTT">-</strong>
+                        </div>
+
+                        <div class="prospect-info-item">
+                            <span>CURP</span>
+                            <strong id="DC">-</strong>
+                        </div>
+
+                        <div class="prospect-info-item">
+                            <span>Régimen fiscal</span>
+                            <strong id="DTR">-</strong>
+                        </div>
+
+                        <div class="prospect-info-item">
+                            <span>Actividad económica</span>
+                            <strong id="DEA">-</strong>
+                        </div>
+
+                        <div class="prospect-info-item">
+                            <span>Uso habitual de CFDI</span>
+                            <strong id="DCU">-</strong>
+                        </div>
+
+                        <div class="prospect-info-item">
+                            <span>Fecha de alta del cliente</span>
+                            <strong id="DCSD">-</strong>
+                        </div>
+
+                        <div class="prospect-info-item">
+                            <span>Última revisión fiscal</span>
+                            <strong id="DFRD">-</strong>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- ACCOUNTING OPERATIONS -->
+                <div class="prospect-info-card" id="Accounting-Block-2">
+
+                    <div class="prospect-section-title">
+                        <div>
+                            <h3>Operación contable</h3>
+                            <p>Información para administrar los servicios contables del cliente.</p>
+                        </div>
+                    </div>
+
+                    <div class="prospect-info-grid">
+
+                        <div class="prospect-info-item">
+                            <span>Nombre o razón social</span>
+                            <strong id="detailLegalName">-</strong>
+                        </div>
+
+                        <div class="prospect-info-item">
+                            <span>Correo para facturación</span>
+                            <strong id="detailBillingEmail">-</strong>
+                        </div>
+
+                        <div class="prospect-info-item">
+                            <span>Periodicidad del servicio</span>
+                            <strong id="detailAccountingFrequency">-</strong>
+                        </div>
+
+                        <div class="prospect-info-item">
+                            <span>Honorarios acordados</span>
+                            <strong id="detailAccountingFee" class="money-value">$0.00 MXN</strong>
+                        </div>
+
+                        <div class="prospect-info-item">
+                            <span>Inicio del servicio</span>
+                            <strong id="detailServiceStartDate">-</strong>
+                        </div>
+
+                        <div class="prospect-info-item">
+                            <span>¿Tiene empleados?</span>
+                            <strong id="detailHasEmployees">-</strong>
+                        </div>
+
+                        <div class="prospect-info-item">
+                            <span>¿Emite facturas?</span>
+                            <strong id="detailIssuesInvoices">-</strong>
+                        </div>
+
+                        <div class="prospect-info-item">
+                            <span>¿Recibe facturas?</span>
+                            <strong id="detailReceivesInvoices">-</strong>
+                        </div>
+
+                        <div class="prospect-info-item">
+                            <span>Estado de e.firma</span>
+                            <strong id="detailEFirmaStatus">-</strong>
+                        </div>
+
+                        <div class="prospect-info-item">
+                            <span>Vencimiento de e.firma</span>
+                            <strong id="detailEFirmaExpiration">-</strong>
+                        </div>
+
+                        <div class="prospect-info-item">
+                            <span>Contador asignado</span>
+                            <strong id="detailAccountant">-</strong>
+                        </div>
+
+                        <div class="prospect-info-item">
+                            <span>Estado del contrato</span>
+                            <strong id="detailContractStatus">-</strong>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- SALES / OPPORTUNITY -->
+                <div class="prospect-info-card">
+
+                    <div class="prospect-section-title">
+                        <div>
+                            <h3>Información comercial</h3>
+                            <p>Información relacionada con la oportunidad.</p>
+                        </div>
+                    </div>
+
+                    <div class="prospect-info-grid">
+
+                        <div class="prospect-info-item">
+                            <span>Servicio de interés</span>
+                            <strong id="detailService">-</strong>
+                        </div>
+
+                        <div class="prospect-info-item">
+                            <span>Valor estimado</span>
+                            <strong id="detailEstimatedValue" class="money-value">$0.00 MXN</strong>
+                        </div>
+
+                        <div class="prospect-info-item">
+                            <span>Prioridad</span>
+                            <strong id="detailPriority">-</strong>
+                        </div>
+
+                        <div class="prospect-info-item">
+                            <span>Probabilidad</span>
+                            <strong id="detailProbability">0%</strong>
+                        </div>
+
+                        <div class="prospect-info-item">
+                            <span>Valor ponderado</span>
+                            <strong id="detailWeightedValue" class="money-value">$0.00 MXN</strong>
+                        </div>
+
+                        <div class="prospect-info-item">
+                            <span>Fecha estimada de cierre</span>
+                            <strong id="detailExpectedClose">-</strong>
+                        </div>
+
+                        <div class="prospect-info-item">
+                            <span>Próximo seguimiento</span>
+                            <strong id="detailFollowUp">-</strong>
+                        </div>
+
+                        <div class="prospect-info-item">
+                            <span>Último contacto</span>
+                            <strong id="detailLastContact">-</strong>
+                        </div>
+
+                        <div class="prospect-info-item">
+                            <span>Origen</span>
+                            <strong id="detailSource">-</strong>
+                        </div>
+
+                        <div class="prospect-info-item">
+                            <span>Origen de oportunidad</span>
+                            <strong id="detailOpportunitySource">-</strong>
+                        </div>
+
+                        <div class="prospect-info-item">
+                            <span>Responsable</span>
+                            <strong id="detailAssignedTo">-</strong>
+                        </div>
+
+                        <div class="prospect-info-item">
+                            <span>Fecha de creación</span>
+                            <strong id="detailCreatedAt">-</strong>
+                        </div>
+
+                        <div class="prospect-info-item">
+                            <span>Próxima acción</span>
+                            <strong id="detailNextAction">-</strong>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- SERVICES / PRODUCTS -->
+                <div class="prospect-info-card">
+
+                    <div class="prospect-section-title">
+                        <div>
+                            <h3>Productos y servicios</h3>
+                            <p>Servicios o productos relacionados con esta oportunidad.</p>
+                        </div>
+
+                        <button type="button" id="addProspectService" title="Agregar servicio">
+                            <i class="fa-solid fa-plus"></i>
+                        </button>
+                    </div>
+
+                    <div class="prospect-services" id="prospectServices">
+                        <div class="prospect-empty-state">
+                            <i class="fa-solid fa-box-open"></i>
+                            <p>No hay productos o servicios agregados.</p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- EMAIL SEQUENCE -->
+                <div class="prospect-info-card">
+
+                    <div class="prospect-section-title">
+                        <div>
+                            <h3>Secuencia de correo</h3>
+                            <p>Seguimiento automático y comportamiento del contacto.</p>
+                        </div>
+                    </div>
+
+                    <div class="email-sequence-summary">
+
+                        <div class="email-sequence-header">
+                            <div>
+                                <span>Secuencia</span>
+                                <strong id="detailEmailSequenceName">Sin secuencia</strong>
+                            </div>
+
+                            <span class="sequence-status" id="detailEmailSequenceStatus">
+                                Inactiva
+                            </span>
+                        </div>
+
+                        <div class="email-sequence-progress">
+                            <div class="sequence-progress-info">
+                                <span>Progreso</span>
+                                <strong id="detailEmailSequenceStep">0 de 0</strong>
+                            </div>
+
+                            <div class="sequence-progress-bar">
+                                <div id="detailEmailSequenceProgress" style="width:0%;"></div>
+                            </div>
+                        </div>
+
+                        <div class="prospect-info-grid email-engagement-grid">
+
+                            <div class="prospect-info-item">
+                                <span>Último correo enviado</span>
+                                <strong id="detailLastEmailSent">-</strong>
+                            </div>
+
+                            <div class="prospect-info-item">
+                                <span>Última apertura</span>
+                                <strong id="detailLastEmailOpened">-</strong>
+                            </div>
+
+                            <div class="prospect-info-item">
+                                <span>Último clic</span>
+                                <strong id="detailLastEmailClicked">-</strong>
+                            </div>
+
+                            <div class="prospect-info-item">
+                                <span>Última respuesta</span>
+                                <strong id="detailLastEmailReply">-</strong>
+                            </div>
+
+                            <div class="prospect-info-item">
+                                <span>Correos enviados</span>
+                                <strong id="detailEmailSentCount">0</strong>
+                            </div>
+
+                            <div class="prospect-info-item">
+                                <span>Correos abiertos</span>
+                                <strong id="detailEmailOpenCount">0</strong>
+                            </div>
+
+                            <div class="prospect-info-item">
+                                <span>Clics</span>
+                                <strong id="detailEmailClickCount">0</strong>
+                            </div>
+
+                            <div class="prospect-info-item">
+                                <span>Respondió</span>
+                                <strong id="detailEmailReplied">No</strong>
+                            </div>
+
+                        </div>
+
+                        <div class="email-sequence-actions">
+                            <button type="button" id="viewEmailSequence">Ver secuencia</button>
+                            <button type="button" id="pauseEmailSequence">Pausar</button>
+                            <button type="button" id="stopEmailSequence">Detener</button>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- TASKS -->
+                <div class="prospect-info-card">
+
+                    <div class="prospect-section-title">
+                        <div>
+                            <h3>Tareas</h3>
+                            <p>Acciones pendientes relacionadas con este cliente.</p>
+                        </div>
+
+                        <button type="button" id="addProspectTask">
+                            <i class="fa-solid fa-plus"></i>
+                        </button>
+                    </div>
+
+                    <div class="prospect-tasks" id="prospectTasks">
+                        <div class="prospect-empty-state">
+                            <i class="fa-solid fa-list-check"></i>
+                            <p>No hay tareas pendientes.</p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- APPOINTMENTS -->
+                <div class="prospect-info-card">
+
+                    <div class="prospect-section-title">
+                        <div>
+                            <h3>Citas y reuniones</h3>
+                            <p>Próximas y anteriores citas con este cliente.</p>
+                        </div>
+
+                        <button type="button" id="addProspectAppointment">
+                            <i class="fa-solid fa-plus"></i>
+                        </button>
+                    </div>
+
+                    <div class="prospect-appointments" id="prospectAppointments">
+                        <div class="prospect-empty-state">
+                            <i class="fa-regular fa-calendar"></i>
+                            <p>No hay citas registradas.</p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- NOTES -->
+                <div class="prospect-info-card">
+
+                    <div class="prospect-section-title">
+                        <div>
+                            <h3>Notas</h3>
+                            <p>Información y comentarios sobre este cliente.</p>
+                        </div>
+                    </div>
+
+                    <div class="add-note-box">
+
+                        <textarea
+                            id="prospectNoteInput"
+                            placeholder="Escribe una nota sobre este cliente..."
+                            rows="3"
+                        ></textarea>
+
+                        <div class="add-note-footer">
+                            <span>Solo los usuarios autorizados de este negocio podrán verla.</span>
+
+                            <button type="button" id="addProspectNote">
+                                <i class="fa-solid fa-plus"></i>
+                                Agregar nota
+                            </button>
+                        </div>
+
+                    </div>
+
+                    <!-- Renamed to avoid conflicting with the prospect creation form -->
+                    <div class="prospect-notes" id="prospectNotesList">
+                        <!-- Notes rendered by JavaScript -->
+                    </div>
+
+                </div>
+
+                <!-- CUSTOM FIELDS -->
+                <div class="prospect-info-card">
+
+                    <div class="prospect-section-title">
+                        <div>
+                            <h3>Información adicional</h3>
+                            <p>Campos personalizados para este negocio.</p>
+                        </div>
+                    </div>
+
+                    <div class="prospect-info-grid" id="prospectCustomFields">
+                        <div class="prospect-empty-state">
+                            <i class="fa-solid fa-sliders"></i>
+                            <p>No hay información adicional.</p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- SIDEBAR -->
+            <div class="prospect-detail-side">
+
+                <!-- SUMMARY -->
+                <div class="prospect-side-card">
+
+                    <h3>Resumen</h3>
+
+                    <div class="prospect-summary-value">
+                        <span>Valor de oportunidad</span>
+                        <strong id="detailSideValue">$0.00 MXN</strong>
+                    </div>
+
+                    <div class="prospect-summary-row">
+                        <span>Estado</span>
+                        <strong id="detailSideStatus">Nuevo</strong>
+                    </div>
+
+                    <div class="prospect-summary-row">
+                        <span>Probabilidad</span>
+                        <strong id="detailSideProbability">0%</strong>
+                    </div>
+
+                    <div class="prospect-summary-row">
+                        <span>Seguimiento</span>
+                        <strong id="detailSideFollowUp">-</strong>
+                    </div>
+
+                    <div class="prospect-summary-row">
+                        <span>Responsable</span>
+                        <strong id="detailSideAssignedTo">-</strong>
+                    </div>
+
+                </div>
+
+                <!-- NEXT ACTION -->
+                <div class="prospect-side-card">
+
+                    <h3>Próxima acción</h3>
+
+                    <!-- Renamed to avoid conflicting with the prospect creation form -->
+                    <div class="next-action-card" id="detailNextActionCard">
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                        <div>
+                            <strong id="detailNextActionTitle">Sin acción programada</strong>
+                            <span id="detailNextActionDate">-</span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- DOCUMENTS -->
+                <div class="prospect-side-card">
+
+                    <div class="prospect-side-title">
+                        <div>
+                            <h3>Documentos</h3>
+                            <span id="prospectDocumentCount">0 archivos</span>
+                        </div>
+
+                        <button type="button" id="uploadProspectDocument" title="Subir documento">
+                            <i class="fa-solid fa-plus"></i>
+                        </button>
+                    </div>
+
+                    <input type="file" id="prospectDocumentInput" hidden multiple>
+
+                    <div class="prospect-documents" id="prospectDocuments">
+                        <div class="prospect-documents-empty">
+                            <i class="fa-regular fa-folder-open"></i>
+                            <p>No hay documentos</p>
+
+                            <button type="button" id="emptyProspectDocument">
+                                Subir documento
+                            </button>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- PROJECTS -->
+                <div class="prospect-side-card">
+
+                    <div class="prospect-side-title">
+                        <div>
+                            <h3>Proyectos</h3>
+                            <span id="prospectProjectCount">0 proyectos</span>
+                        </div>
+
+                        <button type="button" id="addProspectProject" title="Nuevo proyecto">
+                            <i class="fa-solid fa-plus"></i>
+                        </button>
+                    </div>
+
+                    <div class="prospect-projects" id="prospectProjects">
+                        <div class="prospect-documents-empty">
+                            <i class="fa-solid fa-diagram-project"></i>
+                            <p>No hay proyectos.</p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- COMMUNICATION -->
+                <div class="prospect-side-card">
+
+                    <h3>Comunicación</h3>
+
+                    <div class="prospect-communication-summary">
+
+                        <div class="communication-stat">
+                            <i class="fa-regular fa-envelope"></i>
+                            <div>
+                                <span>Correos</span>
+                                <strong id="detailCommunicationEmails">0</strong>
+                            </div>
+                        </div>
+
+                        <div class="communication-stat">
+                            <i class="fa-solid fa-phone"></i>
+                            <div>
+                                <span>Llamadas</span>
+                                <strong id="detailCommunicationCalls">0</strong>
+                            </div>
+                        </div>
+
+                        <div class="communication-stat">
+                            <i class="fa-brands fa-whatsapp"></i>
+                            <div>
+                                <span>WhatsApp</span>
+                                <strong id="detailCommunicationWhatsApp">0</strong>
+                            </div>
+                        </div>
+
+                        <div class="communication-stat">
+                            <i class="fa-regular fa-calendar"></i>
+                            <div>
+                                <span>Reuniones</span>
+                                <strong id="detailCommunicationMeetings">0</strong>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- ACTIVITY TIMELINE -->
+                <div class="prospect-side-card">
+
+                    <div class="prospect-side-title">
+                        <div>
+                            <h3>Actividad</h3>
+                            <span id="prospectActivityCount">0 eventos</span>
+                        </div>
+                    </div>
+
+                    <div class="prospect-timeline" id="prospectTimeline">
+                        <div class="timeline-empty">No hay actividad registrada.</div>
+                    </div>
+
+                </div>
+
+                <!-- AUDIT HISTORY -->
+                <div class="prospect-side-card">
+
+                    <div class="prospect-side-title">
+                        <div>
+                            <h3>Historial de cambios</h3>
+                            <span id="prospectAuditCount">0 cambios</span>
+                        </div>
+
+                        <button type="button" id="viewFullAuditHistory" title="Ver historial completo">
+                            <i class="fa-solid fa-clock-rotate-left"></i>
+                        </button>
+                    </div>
+
+                    <div class="prospect-audit" id="prospectAuditHistory">
+                        <div class="timeline-empty">No hay cambios registrados.</div>
+                    </div>
+
+                </div>
+
+                <!-- RECENT USERS -->
+                <div class="prospect-side-card">
+
+                    <h3>Acceso reciente</h3>
+
+                    <div class="prospect-user-history" id="prospectUserHistory">
+                        <div class="timeline-empty">Nadie ha accedido recientemente.</div>
+                    </div>
+
+                </div>
+
+                <!-- QUOTES / CONTRACTS / INVOICES -->
+                <div class="prospect-side-card">
+
+                    <h3>Comercial</h3>
+
+                    <div class="prospect-commercial-links">
+
+                        <button type="button" id="viewProspectQuotes">
+                            <i class="fa-solid fa-file-invoice-dollar"></i>
+                            <span>Cotizaciones</span>
+                            <strong id="prospectQuoteCount">0</strong>
+                        </button>
+
+                        <button type="button" id="viewProspectContracts">
+                            <i class="fa-solid fa-file-signature"></i>
+                            <span>Contratos</span>
+                            <strong id="prospectContractCount">0</strong>
+                        </button>
+
+                        <button type="button" id="viewProspectInvoices">
+                            <i class="fa-solid fa-file-invoice"></i>
+                            <span>Facturas</span>
+                            <strong id="prospectInvoiceCount">0</strong>
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <section class="page" id="clientes">
+
+            <div class="page-header">
+
+                <div>
+
+                    <div class="breadcrumb">
+                        Gestión / Clientes
+                    </div>
+
+                    <h1>
+                        Clientes
+                    </h1>
+
+                    <p>
+                        Todos tus clientes en un solo lugar.
+                    </p>
+
+                </div>
+
+                <button class="primary-button">
+
+                    <i class="fa-solid fa-plus"></i>
+
+                    Nuevo cliente
+
+                </button>
+
+            </div>
+
+
+            <div class="client-summary">
+
+                <div>
+                    <strong>86</strong>
+                    <span>Clientes activos</span>
+                </div>
+
+                <div>
+                    <strong>5</strong>
+                    <span>Nuevos este mes</span>
+                </div>
+
+                <div>
+                    <strong>3</strong>
+                    <span>Por renovar</span>
+                </div>
+
+                <div>
+                    <strong>2</strong>
+                    <span>Con pagos pendientes</span>
+                </div>
+
+            </div>
+
+
+            <div class="panel">
+
+                <div class="filter-bar">
+
+                    <div class="search-table">
+
+                        <i class="fa-solid fa-magnifying-glass"></i>
+
+                        <input
+                            type="text"
+                            placeholder="Buscar cliente..."
+                        >
+
+                    </div>
+
+                    <select>
+                        <option>Todos los servicios</option>
+                        <option>Contabilidad</option>
+                        <option>Impuestos</option>
+                        <option>Asesoría</option>
+                    </select>
+
+                </div>
+
+
+                <div class="table-wrapper">
+
+                    <table>
+
+                        <thead>
+
+                            <tr>
+
+                                <th>CLIENTE</th>
+                                <th>SERVICIO</th>
+                                <th>ESTADO</th>
+                                <th>DESDE</th>
+                                <th>CUOTA</th>
+                                <th></th>
+
+                            </tr>
+
+                        </thead>
+
+                        <tbody>
+
+                            <tr>
+
+                                <td>
+
+                                    <div class="table-user">
+
+                                        <div class="avatar green-bg">
+                                            RM
+                                        </div>
+
+                                        <div>
+
+                                            <strong>
+                                                Roberto Martínez
+                                            </strong>
+
+                                            <span>
+                                                Persona física
+                                            </span>
+
+                                        </div>
+
+                                    </div>
+
+                                </td>
+
+                                <td>
+                                    Contabilidad mensual
+                                </td>
+
+                                <td>
+                                    <span class="status active">
+                                        Activo
+                                    </span>
+                                </td>
+
+                                <td>
+                                    Ene 2025
+                                </td>
+
+                                <td>
+                                    $2,500 / mes
+                                </td>
+
+                                <td>
+                                    <button class="row-menu">
+                                        <i class="fa-solid fa-ellipsis"></i>
+                                    </button>
+                                </td>
+
+                            </tr>
+
+                            <tr>
+
+                                <td>
+
+                                    <div class="table-user">
+
+                                        <div class="avatar blue-bg">
+                                            ML
+                                        </div>
+
+                                        <div>
+
+                                            <strong>
+                                                María López
+                                            </strong>
+
+                                            <span>
+                                                Persona física
+                                            </span>
+
+                                        </div>
+
+                                    </div>
+
+                                </td>
+
+                                <td>
+                                    Impuestos
+                                </td>
+
+                                <td>
+                                    <span class="status active">
+                                        Activo
+                                    </span>
+                                </td>
+
+                                <td>
+                                    Mar 2026
+                                </td>
+
+                                <td>
+                                    $1,800 / mes
+                                </td>
+
+                                <td>
+                                    <button class="row-menu">
+                                        <i class="fa-solid fa-ellipsis"></i>
+                                    </button>
+                                </td>
+
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+<section class="page" id="servicios">
+
+    <!-- =====================================================
+         PAGE HEADER
+    ====================================================== -->
+
+    <div class="page-header">
+
+        <div>
+
+            <span class="page-label">
+                CATÁLOGO
+            </span>
+
+            <h1>
+                Servicios
+            </h1>
+
+            <p>
+                Administra los servicios contables que ofrece tu negocio.
+            </p>
+
+        </div>
+
+
+        <button
+            class="primary-action"
+            id="CreateServiceBtn"
+            type="button"
+        >
+
+            <i class="fa-solid fa-plus"></i>
+
+            Nuevo servicio
+
+        </button>
+
+    </div>
+
+
+    <!-- =====================================================
+         SUMMARY
+    ====================================================== -->
+
+    <div class="services-summary">
+
+        <div class="service-stat">
+
+            <div class="service-stat-icon">
+                <i class="fa-solid fa-briefcase"></i>
+            </div>
+
+            <div>
+
+                <span>
+                    Servicios
+                </span>
+
+                <strong id="TotalServices">
+                    0
+                </strong>
+
+            </div>
+
+        </div>
+
+
+        <div class="service-stat">
+
+            <div class="service-stat-icon">
+                <i class="fa-solid fa-circle-check"></i>
+            </div>
+
+            <div>
+
+                <span>
+                    Activos
+                </span>
+
+                <strong id="ActiveServices">
+                    0
+                </strong>
+
+            </div>
+
+        </div>
+
+
+        <div class="service-stat">
+
+            <div class="service-stat-icon">
+                <i class="fa-solid fa-circle-pause"></i>
+            </div>
+
+            <div>
+
+                <span>
+                    Inactivos
+                </span>
+
+                <strong id="InactiveServices">
+                    0
+                </strong>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- =====================================================
+         TOOLBAR
+    ====================================================== -->
+
+    <div class="services-toolbar">
+
+        <div class="service-search">
+
+            <i class="fa-solid fa-magnifying-glass"></i>
+
+            <input
+                type="text"
+                id="ServiceSearch"
+                placeholder="Buscar servicios..."
+            >
+
+        </div>
+
+
+        <select id="ServiceStatusFilter">
+
+            <option value="all">
+                Todos los servicios
+            </option>
+
+            <option value="active">
+                Activos
+            </option>
+
+            <option value="inactive">
+                Inactivos
+            </option>
+
+        </select>
+
+    </div>
+
+
+    <!-- =====================================================
+         SERVICES
+    ====================================================== -->
+
+    <div class="services-container">
+
+        <div class="services-header">
+
+            <div>
+
+                <h2>
+                    Catálogo de servicios
+                </h2>
+
+                <span id="ServiceCount">
+                    0 servicios
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <div
+            class="services-list"
+            id="ServicesList"
+        >
+
+            <!--
+                SERVICES WILL BE GENERATED HERE
+            -->
+
+
+            <div
+                class="empty-services"
+                id="EmptyServices"
+            >
+
+                <div class="empty-services-icon">
+
+                    <i class="fa-solid fa-briefcase"></i>
+
+                </div>
+
+
+                <h3>
+                    No tienes servicios
+                </h3>
+
+
+                <p>
+                    Agrega los servicios contables que ofrece tu negocio.
+                </p>
+
+
+                <button
+                    type="button"
+                    id="EmptyCreateServiceBtn"
+                >
+
+                    <i class="fa-solid fa-plus"></i>
+
+                    Agregar servicio
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<section class="page" id="tareas">
+
+    <div class="page-header">
+
+        <div>
+            <span class="page-label">
+                PRODUCTIVIDAD
+            </span>
+
+            <h1>
+                Tareas
+            </h1>
+
+            <p>
+                Organiza tus pendientes, seguimientos y actividades.
+            </p>
+        </div>
+
+
+        <button class="primary-action" id="CreateTaskBtn">
+
+            <i class="fa-solid fa-plus"></i>
+
+            Nueva tarea
+
+        </button>
+
+    </div>
+
+
+    <!-- =====================================================
+         TASK SUMMARY
+    ====================================================== -->
+
+    <div class="task-summary">
+
+        <div class="task-stat">
+
+            <div class="task-stat-icon">
+                <i class="fa-solid fa-list-check"></i>
+            </div>
+
+            <div>
+                <span>
+                    Pendientes
+                </span>
+
+                <strong id="PendingTasks">
+                    0
+                </strong>
+            </div>
+
+        </div>
+
+
+        <div class="task-stat">
+
+            <div class="task-stat-icon">
+                <i class="fa-solid fa-clock"></i>
+            </div>
+
+            <div>
+                <span>
+                    Para hoy
+                </span>
+
+                <strong id="TodayTasks">
+                    0
+                </strong>
+            </div>
+
+        </div>
+
+
+        <div class="task-stat">
+
+            <div class="task-stat-icon">
+                <i class="fa-solid fa-circle-exclamation"></i>
+            </div>
+
+            <div>
+                <span>
+                    Vencidas
+                </span>
+
+                <strong id="OverdueTasks">
+                    0
+                </strong>
+            </div>
+
+        </div>
+
+
+        <div class="task-stat">
+
+            <div class="task-stat-icon">
+                <i class="fa-solid fa-check"></i>
+            </div>
+
+            <div>
+                <span>
+                    Completadas
+                </span>
+
+                <strong id="CompletedTasks">
+                    0
+                </strong>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- =====================================================
+         TASK TOOLBAR
+    ====================================================== -->
+
+    <div class="tasks-toolbar">
+
+        <div class="task-search">
+
+            <i class="fa-solid fa-magnifying-glass"></i>
+
+            <input
+                type="text"
+                id="TaskSearch"
+                placeholder="Buscar tareas..."
+            >
+
+        </div>
+
+
+        <select id="TaskFilter">
+
+            <option value="all">
+                Todas
+            </option>
+
+            <option value="pending">
+                Pendientes
+            </option>
+
+            <option value="today">
+                Para hoy
+            </option>
+
+            <option value="overdue">
+                Vencidas
+            </option>
+
+            <option value="completed">
+                Completadas
+            </option>
+
+        </select>
+
+
+        <select id="TaskPriorityFilter">
+
+            <option value="all">
+                Todas las prioridades
+            </option>
+
+            <option value="high">
+                Alta
+            </option>
+
+            <option value="medium">
+                Media
+            </option>
+
+            <option value="low">
+                Baja
+            </option>
+
+        </select>
+
+    </div>
+
+
+    <!-- =====================================================
+         TASK LIST
+    ====================================================== -->
+
+    <div class="tasks-container">
+
+        <div class="tasks-header">
+
+            <h2>
+                Mis tareas
+            </h2>
+
+            <span id="TaskCount">
+                0 tareas
+            </span>
+
+        </div>
+
+
+        <div class="tasks-list" id="TasksList">
+
+            <!-- TASKS WILL BE GENERATED HERE -->
+
+            <div class="empty-tasks" id="EmptyTasks">
+
+                <div class="empty-tasks-icon">
+
+                    <i class="fa-solid fa-list-check"></i>
+
+                </div>
+
+                <h3>
+                    No tienes tareas
+                </h3>
+
+                <p>
+                    Crea una tarea para comenzar a organizar tus pendientes.
+                </p>
+
+                <button
+                    type="button"
+                    id="EmptyCreateTaskBtn"
+                >
+                    Crear tarea
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+
+
+
+<section class="page" id="calendario">
+
+    <!-- CALENDAR HEADER -->
+    <div class="calendar-header">
+
+        <div class="calendar-heading">
+
+            <div class="calendar-icon">
+                <i class="fa-regular fa-calendar"></i>
+            </div>
+
+            <div>
+                <h1>Calendario</h1>
+
+                <p>
+                    Administra citas, vencimientos y actividades de tu negocio.
+                </p>
+            </div>
+
+        </div>
+
+
+        <button
+            class="calendar-add-btn"
+            id="openCalendarEvent"
+            type="button"
+        >
+            <i class="fa-solid fa-plus"></i>
+            Nueva actividad
+        </button>
+
+    </div>
+
+
+    <!-- CALENDAR TOOLBAR -->
+
+    <div class="calendar-toolbar">
+
+        <div class="calendar-navigation">
+
+            <button
+                type="button"
+                id="calendarPrevious"
+                class="calendar-nav-btn"
+            >
+                <i class="fa-solid fa-chevron-left"></i>
+            </button>
+
+
+            <button
+                type="button"
+                id="calendarToday"
+                class="calendar-today-btn"
+            >
+                Hoy
+            </button>
+
+
+            <button
+                type="button"
+                id="calendarNext"
+                class="calendar-nav-btn"
+            >
+                <i class="fa-solid fa-chevron-right"></i>
+            </button>
+
+        </div>
+
+
+        <h2 id="calendarMonth">
+            Septiembre 2026
+        </h2>
+
+
+        <div class="calendar-view-buttons">
+
+            <button
+                type="button"
+                class="calendar-view-btn active"
+                data-view="month"
+            >
+                Mes
+            </button>
+
+            <button
+                type="button"
+                class="calendar-view-btn"
+                data-view="week"
+            >
+                Semana
+            </button>
+
+            <button
+                type="button"
+                class="calendar-view-btn"
+                data-view="day"
+            >
+                Día
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- CALENDAR -->
+
+    <div class="calendar-container">
+
+        <div class="calendar-weekdays">
+
+            <div>Dom</div>
+            <div>Lun</div>
+            <div>Mar</div>
+            <div>Mié</div>
+            <div>Jue</div>
+            <div>Vie</div>
+            <div>Sáb</div>
+
+        </div>
+
+
+        <div
+            class="calendar-grid"
+            id="calendarGrid"
+        ></div>
+
+    </div>
+
+
+    <!-- UPCOMING ACTIVITIES -->
+
+    <div class="calendar-bottom">
+
+        <div class="upcoming-card">
+
+            <div class="upcoming-header">
+
+                <div>
+
+                    <h3>
+                        Próximas actividades
+                    </h3>
+
+                    <p>
+                        Tus próximas citas y pendientes.
+                    </p>
+
+                </div>
+
+                <i class="fa-regular fa-clock"></i>
+
+            </div>
+
+
+            <div
+                id="upcomingEvents"
+                class="upcoming-events"
+            >
+
+                <div class="empty-calendar">
+
+                    <i class="fa-regular fa-calendar-check"></i>
+
+                    <p>
+                        No hay actividades próximas.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="calendar-legend">
+
+            <h3>
+                Tipos de actividad
+            </h3>
+
+            <div class="legend-item">
+
+                <span class="legend-dot appointment"></span>
+
+                Cita
+
+            </div>
+
+            <div class="legend-item">
+
+                <span class="legend-dot task"></span>
+
+                Tarea
+
+            </div>
+
+            <div class="legend-item">
+
+                <span class="legend-dot deadline"></span>
+
+                Vencimiento
+
+            </div>
+
+            <div class="legend-item">
+
+                <span class="legend-dot reminder"></span>
+
+                Recordatorio
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =========================================
+     CREATE EVENT MODAL
+========================================= -->
+
+<div class="calendar-modal" id="calendarModal">
+
+    <div class="calendar-modal-overlay"></div>
+
+
+    <div class="calendar-modal-content">
+
+        <div class="calendar-modal-header">
+
+            <div>
+
+                <span>
+                    NUEVA ACTIVIDAD
+                </span>
+
+                <h2>
+                    Crear actividad
+                </h2>
+
+            </div>
+
+
+            <button
+                type="button"
+                id="closeCalendarModal"
+            >
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+        </div>
+
+
+        <form id="calendarEventForm">
+
+            <!-- TITLE -->
+
+            <div class="calendar-form-group">
+
+                <label for="eventTitle">
+                    Título
+                </label>
+
+                <input
+                    type="text"
+                    id="eventTitle"
+                    placeholder="Ej. Reunión con cliente"
+                    required
+                >
+
+            </div>
+
+
+            <!-- TYPE -->
+
+            <div class="calendar-form-group">
+
+                <label for="eventType">
+                    Tipo de actividad
+                </label>
+
+                <select
+                    id="eventType"
+                    required
+                >
+
+                    <option value="">
+                        Selecciona un tipo
+                    </option>
+
+                    <option value="appointment">
+                        Cita
+                    </option>
+
+                    <option value="task">
+                        Tarea
+                    </option>
+
+                    <option value="deadline">
+                        Vencimiento
+                    </option>
+
+                    <option value="reminder">
+                        Recordatorio
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <div class="calendar-form-row">
+
+                <!-- DATE -->
+
+                <div class="calendar-form-group">
+
+                    <label for="eventDate">
+                        Fecha
+                    </label>
+
+                    <input
+                        type="date"
+                        id="eventDate"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- TIME -->
+
+                <div class="calendar-form-group">
+
+                    <label for="eventTime">
+                        Hora
+                    </label>
+
+                    <input
+                        type="time"
+                        id="eventTime"
+                        required
+                    >
+
+                </div>
+
+            </div>
+
+
+            <!-- LOCATION -->
+
+            <div class="calendar-form-group">
+
+                <label for="eventLocation">
+                    Ubicación
+                </label>
+
+                <input
+                    type="text"
+                    id="eventLocation"
+                    placeholder="Ej. Oficina del cliente"
+                >
+
+            </div>
+
+
+            <!-- NOTES -->
+
+            <div class="calendar-form-group">
+
+                <label for="eventNotes">
+                    Notas
+                </label>
+
+                <textarea
+                    id="eventNotes"
+                    placeholder="Agrega información adicional..."
+                    rows="4"
+                ></textarea>
+
+            </div>
+
+
+            <div
+                class="calendar-form-error"
+                id="calendarFormError"
+            ></div>
+
+
+            <div class="calendar-modal-actions">
+
+                <button
+                    type="button"
+                    class="calendar-cancel-btn"
+                    id="cancelCalendarEvent"
+                >
+                    Cancelar
+                </button>
+
+                <button
+                    type="submit"
+                    class="calendar-save-btn"
+                >
+                    <i class="fa-solid fa-check"></i>
+                    Crear actividad
+                </button>
+
+            </div>
+
+        </form>
+
+    </div>
+
+</div>
+
+<section class="page" id="documentos">
+
+    <!-- DOCUMENTS HEADER -->
+
+    <div class="documents-header">
+
+        <div class="documents-heading">
+
+            <div class="documents-icon">
+                <i class="fa-regular fa-folder-open"></i>
+            </div>
+
+            <div>
+
+                <h1>
+                    Documentos
+                </h1>
+
+                <p>
+                    Administra y organiza los documentos de tu negocio y tus clientes.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <button
+            type="button"
+            class="documents-upload-btn"
+            id="openUploadDocument"
+        >
+
+            <i class="fa-solid fa-cloud-arrow-up"></i>
+
+            Subir documento
+
+        </button>
+
+    </div>
+
+
+    <!-- DOCUMENT STATS -->
+
+    <div class="documents-stats">
+
+        <div class="document-stat-card">
+
+            <div class="document-stat-icon blue">
+                <i class="fa-regular fa-folder"></i>
+            </div>
+
+            <div>
+
+                <span>
+                    Documentos
+                </span>
+
+                <strong id="documentsTotal">
+                    0
+                </strong>
+
+            </div>
+
+        </div>
+
+
+        <div class="document-stat-card">
+
+            <div class="document-stat-icon green">
+                <i class="fa-solid fa-file-circle-check"></i>
+            </div>
+
+            <div>
+
+                <span>
+                    Este mes
+                </span>
+
+                <strong id="documentsThisMonth">
+                    0
+                </strong>
+
+            </div>
+
+        </div>
+
+
+        <div class="document-stat-card">
+
+            <div class="document-stat-icon orange">
+                <i class="fa-solid fa-hard-drive"></i>
+            </div>
+
+            <div>
+
+                <span>
+                    Espacio utilizado
+                </span>
+
+                <strong id="documentsStorage">
+                    0 MB
+                </strong>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- DOCUMENT TOOLBAR -->
+
+    <div class="documents-toolbar">
+
+        <div class="documents-search">
+
+            <i class="fa-solid fa-magnifying-glass"></i>
+
+            <input
+                type="search"
+                id="documentSearch"
+                placeholder="Buscar documentos..."
+            >
+
+        </div>
+
+
+        <select id="documentClientFilter">
+
+            <option value="">
+                Todos los clientes
+            </option>
+
+        </select>
+
+
+        <select id="documentTypeFilter">
+
+            <option value="">
+                Todos los tipos
+            </option>
+
+            <option value="contract">
+                Contratos
+            </option>
+
+            <option value="invoice">
+                Facturas
+            </option>
+
+            <option value="identification">
+                Identificaciones
+            </option>
+
+            <option value="proposal">
+                Propuestas
+            </option>
+
+            <option value="report">
+                Reportes
+            </option>
+
+            <option value="tax">
+                Documentos fiscales
+            </option>
+
+            <option value="other">
+                Otros
+            </option>
+
+        </select>
+
+
+        <select id="documentSort">
+
+            <option value="newest">
+                Más recientes
+            </option>
+
+            <option value="oldest">
+                Más antiguos
+            </option>
+
+            <option value="name">
+                Nombre
+            </option>
+
+            <option value="size">
+                Tamaño
+            </option>
+
+        </select>
+
+    </div>
+
+
+    <!-- DOCUMENTS -->
+
+    <div class="documents-card">
+
+        <div class="documents-card-header">
+
+            <div>
+
+                <h3>
+                    Tus documentos
+                </h3>
+
+                <p id="documentsCount">
+                    0 documentos
+                </p>
+
+            </div>
+
+
+            <div class="documents-view-buttons">
+
+                <button
+                    type="button"
+                    class="document-view-btn active"
+                    data-view="grid"
+                    id="documentsGridView"
+                >
+                    <i class="fa-solid fa-grip"></i>
+                </button>
+
+
+                <button
+                    type="button"
+                    class="document-view-btn"
+                    data-view="list"
+                    id="documentsListView"
+                >
+                    <i class="fa-solid fa-list"></i>
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <div
+            class="documents-grid"
+            id="documentsGrid"
+        >
+
+            <!-- Documents generated by JS -->
+
+        </div>
+
+
+        <!-- EMPTY STATE -->
+
+        <div
+            class="documents-empty"
+            id="documentsEmpty"
+        >
+
+            <div class="documents-empty-icon">
+
+                <i class="fa-regular fa-folder-open"></i>
+
+            </div>
+
+            <h3>
+                No hay documentos
+            </h3>
+
+            <p>
+                Sube tu primer documento para comenzar a organizar tus archivos.
+            </p>
+
+            <button
+                type="button"
+                id="emptyUploadDocument"
+            >
+
+                <i class="fa-solid fa-cloud-arrow-up"></i>
+
+                Subir documento
+
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+<div class="document-modal" id="documentUploadModal">
+
+    <div class="document-modal-overlay"></div>
+
+
+    <div class="document-modal-content">
+
+        <div class="document-modal-header">
+
+            <div>
+
+                <span>
+                    DOCUMENTOS
+                </span>
+
+                <h2>
+                    Subir documento
+                </h2>
+
+            </div>
+
+
+            <button
+                type="button"
+                id="closeDocumentModal"
+            >
+
+                <i class="fa-solid fa-xmark"></i>
+
+            </button>
+
+        </div>
+
+
+        <form id="documentUploadForm">
+
+            <!-- FILE -->
+
+            <div
+                class="document-drop-zone"
+                id="documentDropZone"
+            >
+
+                <input
+                    type="file"
+                    id="documentFile"
+                    hidden
+                >
+
+
+                <div class="document-upload-icon">
+
+                    <i class="fa-solid fa-cloud-arrow-up"></i>
+
+                </div>
+
+
+                <h3>
+                    Selecciona un archivo
+                </h3>
+
+
+                <p>
+                    PDF, Word, Excel, JPG o PNG
+                </p>
+
+
+                <button
+                    type="button"
+                    id="selectDocumentFile"
+                >
+                    Seleccionar archivo
+                </button>
+
+
+                <div
+                    id="selectedDocument"
+                    class="selected-document"
+                ></div>
+
+            </div>
+
+
+            <!-- DOCUMENT NAME -->
+
+            <div class="document-form-group">
+
+                <label for="documentName">
+                    Nombre del documento
+                </label>
+
+                <input
+                    type="text"
+                    id="documentName"
+                    placeholder="Ej. Contrato de servicio"
+                    required
+                >
+
+            </div>
+
+
+            <!-- TYPE -->
+
+            <div class="document-form-group">
+
+                <label for="documentType">
+                    Tipo de documento
+                </label>
+
+                <select
+                    id="documentType"
+                    required
+                >
+
+                    <option value="">
+                        Selecciona un tipo
+                    </option>
+
+                    <option value="contract">
+                        Contrato
+                    </option>
+
+                    <option value="invoice">
+                        Factura
+                    </option>
+
+                    <option value="identification">
+                        Identificación
+                    </option>
+
+                    <option value="proposal">
+                        Propuesta
+                    </option>
+
+                    <option value="report">
+                        Reporte
+                    </option>
+
+                    <option value="tax">
+                        Documento fiscal
+                    </option>
+
+                    <option value="other">
+                        Otro
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <!-- CLIENT -->
+
+            <div class="document-form-group">
+
+                <label for="documentClient">
+                    Cliente
+                </label>
+
+                <select id="documentClient">
+
+                    <option value="">
+                        Sin cliente asignado
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <!-- NOTES -->
+
+            <div class="document-form-group">
+
+                <label for="documentNotes">
+                    Notas
+                </label>
+
+                <textarea
+                    id="documentNotes"
+                    rows="3"
+                    placeholder="Información adicional..."
+                ></textarea>
+
+            </div>
+
+
+            <div
+                class="document-upload-error"
+                id="documentUploadError"
+            ></div>
+
+
+            <div class="document-modal-actions">
+
+                <button
+                    type="button"
+                    id="cancelDocumentUpload"
+                    class="document-cancel-btn"
+                >
+                    Cancelar
+                </button>
+
+
+                <button
+                    type="submit"
+                    id="uploadDocumentButton"
+                    class="document-save-btn"
+                >
+
+                    <i class="fa-solid fa-cloud-arrow-up"></i>
+
+                    Subir documento
+
+                </button>
+
+            </div>
+
+        </form>
+
+    </div>
+
+</div>
+
+<section class="page" id="reportes">
+
+    <!-- REPORTS HEADER -->
+
+    <div class="reports-header">
+
+        <div class="reports-heading">
+
+            <div class="reports-icon">
+                <i class="fa-solid fa-chart-pie"></i>
+            </div>
+
+            <div>
+
+                <h1>
+                    Reportes
+                </h1>
+
+                <p>
+                    Analiza el rendimiento de tu negocio, clientes e ingresos.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="reports-actions">
+
+            <select id="reportPeriod">
+
+                <option value="7">
+                    Últimos 7 días
+                </option>
+
+                <option value="30" selected>
+                    Últimos 30 días
+                </option>
+
+                <option value="90">
+                    Últimos 3 meses
+                </option>
+
+                <option value="365">
+                    Último año
+                </option>
+
+            </select>
+
+
+            <button
+                type="button"
+                id="exportReport"
+                class="export-report-btn"
+            >
+
+                <i class="fa-solid fa-download"></i>
+
+                Exportar
+
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- KPI CARDS -->
+
+    <div class="reports-kpis">
+
+        <!-- REVENUE -->
+
+        <div class="report-kpi">
+
+            <div class="report-kpi-top">
+
+                <div class="report-kpi-icon revenue">
+                    <i class="fa-solid fa-dollar-sign"></i>
+                </div>
+
+                <span class="report-kpi-label">
+                    Ingresos
+                </span>
+
+            </div>
+
+
+            <strong id="reportRevenue">
+                $0
+            </strong>
+
+
+            <div class="report-kpi-change positive">
+
+                <i class="fa-solid fa-arrow-up"></i>
+
+                <span id="revenueChange">
+                    0%
+                </span>
+
+                <small>
+                    vs. periodo anterior
+                </small>
+
+            </div>
+
+        </div>
+
+
+        <!-- CLIENTS -->
+
+        <div class="report-kpi">
+
+            <div class="report-kpi-top">
+
+                <div class="report-kpi-icon clients">
+                    <i class="fa-solid fa-users"></i>
+                </div>
+
+                <span class="report-kpi-label">
+                    Clientes nuevos
+                </span>
+
+            </div>
+
+
+            <strong id="reportClients">
+                0
+            </strong>
+
+
+            <div class="report-kpi-change positive">
+
+                <i class="fa-solid fa-arrow-up"></i>
+
+                <span id="clientsChange">
+                    0%
+                </span>
+
+                <small>
+                    vs. periodo anterior
+                </small>
+
+            </div>
+
+        </div>
+
+
+        <!-- LEADS -->
+
+        <div class="report-kpi">
+
+            <div class="report-kpi-top">
+
+                <div class="report-kpi-icon leads">
+                    <i class="fa-solid fa-user-plus"></i>
+                </div>
+
+                <span class="report-kpi-label">
+                    Prospectos
+                </span>
+
+            </div>
+
+
+            <strong id="reportLeads">
+                0
+            </strong>
+
+
+            <div class="report-kpi-change">
+
+                <span id="leadsConversion">
+                    0%
+                </span>
+
+                <small>
+                    tasa de conversión
+                </small>
+
+            </div>
+
+        </div>
+
+
+        <!-- ACTIVITIES -->
+
+        <div class="report-kpi">
+
+            <div class="report-kpi-top">
+
+                <div class="report-kpi-icon activities">
+                    <i class="fa-solid fa-list-check"></i>
+                </div>
+
+                <span class="report-kpi-label">
+                    Actividades
+                </span>
+
+            </div>
+
+
+            <strong id="reportActivities">
+                0
+            </strong>
+
+
+            <div class="report-kpi-change">
+
+                <span>
+                    citas y tareas
+                </span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- MAIN REPORT GRID -->
+
+    <div class="reports-main-grid">
+
+        <!-- REVENUE REPORT -->
+
+        <div class="report-panel report-revenue-panel">
+
+            <div class="report-panel-header">
+
+                <div>
+
+                    <h3>
+                        Ingresos
+                    </h3>
+
+                    <p>
+                        Rendimiento de ingresos durante el periodo seleccionado.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="report-chart">
+
+                <canvas
+                    id="revenueChart"
+                ></canvas>
+
+            </div>
+
+        </div>
+
+
+        <!-- LEADS FUNNEL -->
+
+        <div class="report-panel">
+
+            <div class="report-panel-header">
+
+                <div>
+
+                    <h3>
+                        Prospectos
+                    </h3>
+
+                    <p>
+                        Estado de tus oportunidades.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div
+                class="lead-funnel"
+                id="leadFunnel"
+            >
+
+                <div class="funnel-row">
+
+                    <div class="funnel-label">
+
+                        <span class="funnel-dot new"></span>
+
+                        Nuevos
+
+                    </div>
+
+                    <strong id="funnelNew">
+                        0
+                    </strong>
+
+                </div>
+
+
+                <div class="funnel-bar">
+
+                    <span
+                        id="funnelNewBar"
+                        class="funnel-fill new"
+                    ></span>
+
+                </div>
+
+
+                <div class="funnel-row">
+
+                    <div class="funnel-label">
+
+                        <span class="funnel-dot contacted"></span>
+
+                        Contactados
+
+                    </div>
+
+                    <strong id="funnelContacted">
+                        0
+                    </strong>
+
+                </div>
+
+
+                <div class="funnel-bar">
+
+                    <span
+                        id="funnelContactedBar"
+                        class="funnel-fill contacted"
+                    ></span>
+
+                </div>
+
+
+                <div class="funnel-row">
+
+                    <div class="funnel-label">
+
+                        <span class="funnel-dot proposal"></span>
+
+                        Propuesta
+
+                    </div>
+
+                    <strong id="funnelProposal">
+                        0
+                    </strong>
+
+                </div>
+
+
+                <div class="funnel-bar">
+
+                    <span
+                        id="funnelProposalBar"
+                        class="funnel-fill proposal"
+                    ></span>
+
+                </div>
+
+
+                <div class="funnel-row">
+
+                    <div class="funnel-label">
+
+                        <span class="funnel-dot won"></span>
+
+                        Convertidos
+
+                    </div>
+
+                    <strong id="funnelWon">
+                        0
+                    </strong>
+
+                </div>
+
+
+                <div class="funnel-bar">
+
+                    <span
+                        id="funnelWonBar"
+                        class="funnel-fill won"
+                    ></span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- SECOND ROW -->
+
+    <div class="reports-secondary-grid">
+
+        <!-- CLIENTS -->
+
+        <div class="report-panel">
+
+            <div class="report-panel-header">
+
+                <div>
+
+                    <h3>
+                        Clientes
+                    </h3>
+
+                    <p>
+                        Crecimiento de clientes.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="client-report">
+
+                <div class="client-report-number">
+
+                    <strong id="totalClients">
+                        0
+                    </strong>
+
+                    <span>
+                        Clientes totales
+                    </span>
+
+                </div>
+
+
+                <div class="client-report-stats">
+
+                    <div>
+
+                        <span>
+                            Nuevos
+                        </span>
+
+                        <strong id="newClients">
+                            0
+                        </strong>
+
+                    </div>
+
+
+                    <div>
+
+                        <span>
+                            Activos
+                        </span>
+
+                        <strong id="activeClients">
+                            0
+                        </strong>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- ACTIVITIES -->
+
+        <div class="report-panel">
+
+            <div class="report-panel-header">
+
+                <div>
+
+                    <h3>
+                        Actividad
+                    </h3>
+
+                    <p>
+                        Actividades realizadas.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="activity-report">
+
+                <div class="activity-report-row">
+
+                    <span>
+                        <i class="fa-regular fa-calendar"></i>
+                        Citas
+                    </span>
+
+                    <strong id="reportAppointments">
+                        0
+                    </strong>
+
+                </div>
+
+
+                <div class="activity-report-row">
+
+                    <span>
+                        <i class="fa-solid fa-list-check"></i>
+                        Tareas
+                    </span>
+
+                    <strong id="reportTasks">
+                        0
+                    </strong>
+
+                </div>
+
+
+                <div class="activity-report-row">
+
+                    <span>
+                        <i class="fa-regular fa-clock"></i>
+                        Pendientes
+                    </span>
+
+                    <strong id="reportPending">
+                        0
+                    </strong>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- TOP CLIENTS -->
+
+        <div class="report-panel">
+
+            <div class="report-panel-header">
+
+                <div>
+
+                    <h3>
+                        Clientes principales
+                    </h3>
+
+                    <p>
+                        Por ingresos generados.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div
+                class="top-clients"
+                id="topClients"
+            >
+
+                <div class="report-empty-small">
+
+                    No hay datos disponibles.
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="page" id="configuracion">
+
+    <div class="page-header">
+
+        <div>
+            <span class="page-label">
+                CONFIGURACIÓN
+            </span>
+
+            <h1>
+                Configuración
+            </h1>
+
+            <p>
+                Administra tu cuenta, usuarios, servicios y preferencias.
+            </p>
+        </div>
+
+    </div>
+
+
+    <div class="settings-grid">
+
+        <!-- CUENTA -->
+        <div class="settings-card">
+
+            <div class="settings-icon">
+                <i class="fa-solid fa-user"></i>
+            </div>
+
+            <div class="settings-content">
+
+                <h3>
+                    Mi cuenta
+                </h3>
+
+                <p>
+                    Administra tu información personal y los datos de tu cuenta.
+                </p>
+
+                <button type="button">
+                    Administrar cuenta
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- NEGOCIO -->
+        <div class="settings-card">
+
+            <div class="settings-icon">
+                <i class="fa-solid fa-building"></i>
+            </div>
+
+            <div class="settings-content">
+
+                <h3>
+                    Información del negocio
+                </h3>
+
+                <p>
+                    Actualiza el nombre, teléfono, dirección y datos de tu negocio.
+                </p>
+
+                <button type="button">
+                    Editar negocio
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- USUARIOS -->
+        <div class="settings-card">
+
+            <div class="settings-icon">
+                <i class="fa-solid fa-users"></i>
+            </div>
+
+            <div class="settings-content">
+
+                <h3>
+                    Usuarios y permisos
+                </h3>
+
+                <p>
+                    Administra usuarios y controla el acceso a tu CRM.
+                </p>
+
+                <button type="button">
+                    Administrar usuarios
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- SERVICIOS -->
+        <div class="settings-card">
+
+            <div class="settings-icon">
+                <i class="fa-solid fa-screwdriver-wrench"></i>
+            </div>
+
+            <div class="settings-content">
+
+                <h3>
+                    Servicios
+                </h3>
+
+                <p>
+                    Agrega, modifica o elimina los servicios que ofrece tu negocio.
+                </p>
+
+                <button type="button">
+                    Administrar servicios
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- NOTIFICACIONES -->
+        <div class="settings-card">
+
+            <div class="settings-icon">
+                <i class="fa-solid fa-bell"></i>
+            </div>
+
+            <div class="settings-content">
+
+                <h3>
+                    Notificaciones
+                </h3>
+
+                <p>
+                    Configura cómo y cuándo quieres recibir notificaciones.
+                </p>
+
+                <button type="button">
+                    Configurar notificaciones
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- SEGURIDAD -->
+        <div class="settings-card">
+
+            <div class="settings-icon">
+                <i class="fa-solid fa-shield-halved"></i>
+            </div>
+
+            <div class="settings-content">
+
+                <h3>
+                    Seguridad
+                </h3>
+
+                <p>
+                    Cambia tu contraseña y administra las opciones de seguridad.
+                </p>
+
+                <button type="button">
+                    Configurar seguridad
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- INTEGRACIONES -->
+        <div class="settings-card">
+
+            <div class="settings-icon">
+                <i class="fa-solid fa-plug"></i>
+            </div>
+
+            <div class="settings-content">
+
+                <h3>
+                    Integraciones
+                </h3>
+
+                <p>
+                    Conecta las herramientas y servicios que utilizas en tu negocio.
+                </p>
+
+                <button type="button">
+                    Ver integraciones
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- PREFERENCIAS -->
+        <div class="settings-card">
+
+            <div class="settings-icon">
+                <i class="fa-solid fa-sliders"></i>
+            </div>
+
+            <div class="settings-content">
+
+                <h3>
+                    Preferencias
+                </h3>
+
+                <p>
+                    Personaliza la experiencia y el funcionamiento de tu CRM.
+                </p>
+
+                <button type="button">
+                    Editar preferencias
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+    </div>
+
+</main>
+
+
+
+<script type="module" src="crmDash.js"></script>
+
+</body>
+</html>

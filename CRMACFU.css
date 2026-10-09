@@ -1,0 +1,1319 @@
+
+:root {
+
+    --navy: #102A43;
+    --navy-dark: #071A2B;
+
+    --teal: #0F766E;
+    --teal-light: #14B8A6;
+
+    --white: #FFFFFF;
+
+    --gray-50: #F8FAFC;
+    --gray-100: #F1F5F9;
+    --gray-200: #E2E8F0;
+    --gray-300: #CBD5E1;
+    --gray-500: #64748B;
+    --gray-600: #475569;
+    --gray-700: #334155;
+    --gray-900: #0F172A;
+
+}
+
+
+* {
+
+    margin: 0;
+    padding: 0;
+
+    box-sizing: border-box;
+
+}
+
+
+body {
+
+    font-family:
+        Inter,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+
+    background: var(--gray-50);
+
+    color: var(--gray-900);
+
+}
+
+
+button,
+input,
+select {
+
+    font: inherit;
+
+}
+
+
+button {
+
+    cursor: pointer;
+
+}
+
+
+a {
+
+    text-decoration: none;
+
+}
+
+
+
+/* =========================================
+   PAGE
+========================================= */
+
+.register-page {
+
+    min-height: 100vh;
+
+    display: grid;
+
+    grid-template-columns: .8fr 1.2fr;
+
+}
+
+
+
+/* =========================================
+   BRAND
+========================================= */
+
+.register-brand {
+
+    position: relative;
+
+    min-height: 100vh;
+
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            145deg,
+            #071A2B,
+            #102A43 55%,
+            #0F4C4A
+        );
+
+    color: white;
+
+}
+
+
+.brand-background {
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+
+        radial-gradient(
+            circle at 20% 15%,
+            rgba(20,184,166,.2),
+            transparent 28%
+        ),
+
+        radial-gradient(
+            circle at 90% 80%,
+            rgba(37,99,235,.15),
+            transparent 30%
+        );
+
+}
+
+
+.brand-content {
+
+    position: relative;
+
+    z-index: 2;
+
+    min-height: 100vh;
+
+    padding: 45px 50px;
+
+    display: flex;
+
+    flex-direction: column;
+
+}
+
+
+/* =========================================
+   BRAND LOGO
+========================================= */
+
+.brand-logo {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 11px;
+
+}
+
+
+.brand-logo-icon {
+
+    width: 42px;
+    height: 42px;
+
+    display: grid;
+
+    place-items: center;
+
+    background: var(--teal);
+
+    border-radius: 9px;
+
+    font-size: 16px;
+
+}
+
+
+.brand-logo strong {
+
+    display: block;
+
+    font-size: 13px;
+
+    letter-spacing: 3px;
+
+}
+
+
+.brand-logo span {
+
+    display: block;
+
+    color: var(--teal-light);
+
+    font-size: 8px;
+
+    font-weight: 800;
+
+    letter-spacing: 2.5px;
+
+}
+
+
+
+/* =========================================
+   BRAND MESSAGE
+========================================= */
+
+.brand-message {
+
+    margin-top: auto;
+
+    margin-bottom: auto;
+
+    max-width: 450px;
+
+}
+
+
+.eyebrow {
+
+    display: block;
+
+    color: #6EE7D8;
+
+    font-size: 9px;
+
+    font-weight: 800;
+
+    letter-spacing: 1.7px;
+
+    margin-bottom: 15px;
+
+}
+
+
+.brand-message h1 {
+
+    font-size: clamp(32px,3.4vw,48px);
+
+    line-height: 1.1;
+
+    letter-spacing: -1.8px;
+
+    font-weight: 500;
+
+}
+
+
+.brand-message h1 strong {
+
+    display: block;
+
+    color: #61D8CC;
+
+}
+
+
+.brand-message p {
+
+    color: #B8C9D5;
+
+    font-size: 13px;
+
+    line-height: 1.8;
+
+    margin-top: 20px;
+
+}
+
+
+/* =========================================
+   BENEFITS
+========================================= */
+
+.benefits {
+
+    margin-top: 28px;
+
+    display: grid;
+
+    gap: 13px;
+
+}
+
+
+.benefit {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    color: #D8E3EA;
+
+    font-size: 10px;
+
+}
+
+
+.benefit i {
+
+    color: var(--teal-light);
+
+}
+
+
+
+/* =========================================
+   BRAND FOOTER
+========================================= */
+
+.brand-footer {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    color: #71889A;
+
+    font-size: 8px;
+
+}
+
+
+
+/* =========================================
+   REGISTER PANEL
+========================================= */
+
+.register-panel {
+
+    min-height: 100vh;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    padding: 35px 40px;
+
+    background: white;
+
+}
+
+
+.register-container {
+
+    width: min(650px, 100%);
+
+}
+
+
+.mobile-logo {
+
+    display: none;
+
+}
+
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.register-header {
+
+    margin-bottom: 22px;
+
+}
+
+
+.register-label {
+
+    color: var(--teal);
+
+    font-size: 8px;
+
+    font-weight: 800;
+
+    letter-spacing: 1.5px;
+
+}
+
+
+.register-header h2 {
+
+    color: var(--navy);
+
+    font-size: 29px;
+
+    letter-spacing: -1px;
+
+    margin: 7px 0 4px;
+
+}
+
+
+.register-header p {
+
+    color: var(--gray-500);
+
+    font-size: 11px;
+
+}
+
+
+
+/* =========================================
+   BUSINESS CONNECTION
+========================================= */
+
+.business-connection {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 11px;
+
+    padding: 11px 13px;
+
+    margin-bottom: 22px;
+
+    background: var(--gray-50);
+
+    border: 1px solid var(--gray-200);
+
+    border-radius: 7px;
+
+}
+
+
+.business-icon {
+
+    width: 34px;
+    height: 34px;
+
+    display: grid;
+
+    place-items: center;
+
+    flex-shrink: 0;
+
+    background: #E6FFFB;
+
+    color: var(--teal);
+
+    border-radius: 7px;
+
+    font-size: 12px;
+
+}
+
+
+.business-connection > div:last-child {
+
+    min-width: 0;
+
+    display: flex;
+
+    flex-direction: column;
+
+}
+
+
+.connection-label {
+
+    color: var(--gray-500);
+
+    font-size: 7px;
+
+    font-weight: 800;
+
+    letter-spacing: 1.2px;
+
+}
+
+
+.business-connection strong {
+
+    color: var(--navy);
+
+    font-size: 10px;
+
+    margin-top: 2px;
+
+}
+
+
+.business-connection small {
+
+    color: var(--gray-500);
+
+    font-size: 8px;
+
+    margin-top: 2px;
+
+}
+
+
+
+/* =========================================
+   PROGRESS
+========================================= */
+
+.progress {
+
+    display: flex;
+
+    align-items: center;
+
+    margin-bottom: 25px;
+
+}
+
+
+.progress-step {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+}
+
+
+.progress-step > span {
+
+    width: 28px;
+    height: 28px;
+
+    display: grid;
+
+    place-items: center;
+
+    border-radius: 50%;
+
+    background: var(--gray-100);
+
+    color: var(--gray-500);
+
+    font-size: 9px;
+
+    font-weight: 800;
+
+}
+
+
+.progress-step.active > span {
+
+    background: var(--teal);
+
+    color: white;
+
+}
+
+
+.progress-step strong {
+
+    display: block;
+
+    font-size: 9px;
+
+    color: var(--gray-700);
+
+}
+
+
+.progress-step small {
+
+    display: block;
+
+    color: var(--gray-500);
+
+    font-size: 7px;
+
+    margin-top: 2px;
+
+}
+
+
+.progress-line {
+
+    height: 1px;
+
+    background: var(--gray-200);
+
+    width: 70px;
+
+    margin: 0 13px;
+
+}
+
+
+
+/* =========================================
+   FORM
+========================================= */
+
+.form-section.hidden {
+
+    display: none;
+
+}
+
+
+.section-title {
+
+    margin-bottom: 17px;
+
+}
+
+
+.section-title h3 {
+
+    color: var(--navy);
+
+    font-size: 14px;
+
+}
+
+
+.section-title p {
+
+    color: var(--gray-500);
+
+    font-size: 9px;
+
+    margin-top: 3px;
+
+}
+
+
+.form-grid {
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 15px;
+
+}
+
+
+.form-group.full {
+
+    grid-column: 1 / -1;
+
+}
+
+
+.form-group label {
+
+    display: block;
+
+    color: var(--gray-700);
+
+    font-size: 9px;
+
+    font-weight: 700;
+
+    margin-bottom: 6px;
+
+}
+
+
+/* =========================================
+   INPUT
+========================================= */
+
+.input-wrapper {
+
+    height: 42px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 9px;
+
+    border: 1px solid var(--gray-200);
+
+    border-radius: 7px;
+
+    padding: 0 11px;
+
+    transition: .2s;
+
+}
+
+
+.input-wrapper:focus-within {
+
+    border-color: var(--teal);
+
+    box-shadow:
+        0 0 0 3px
+        rgba(15,118,110,.07);
+
+}
+
+
+.input-wrapper > i {
+
+    color: var(--gray-500);
+
+    font-size: 11px;
+
+}
+
+
+.input-wrapper input,
+.input-wrapper select {
+
+    flex: 1;
+
+    min-width: 0;
+
+    height: 100%;
+
+    border: 0;
+
+    outline: 0;
+
+    background: transparent;
+
+    color: var(--gray-900);
+
+    font-size: 10px;
+
+}
+
+
+.input-wrapper input::placeholder {
+
+    color: #A0AEC0;
+
+}
+
+
+
+/* =========================================
+   SELECT
+========================================= */
+
+.select-wrapper select {
+
+    appearance: none;
+
+    cursor: pointer;
+
+}
+
+
+
+/* =========================================
+   FIELD HELP
+========================================= */
+
+.field-help {
+
+    display: block;
+
+    color: var(--gray-500);
+
+    font-size: 7px;
+
+    line-height: 1.5;
+
+    margin-top: 5px;
+
+}
+
+
+
+/* =========================================
+   PASSWORD TOGGLE
+========================================= */
+
+.password-toggle {
+
+    border: 0;
+
+    background: transparent;
+
+    color: var(--gray-500);
+
+    font-size: 11px;
+
+}
+
+
+
+/* =========================================
+   PASSWORD RULES
+========================================= */
+
+.password-requirements {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 14px;
+
+    margin-top: 11px;
+
+    margin-bottom: 22px;
+
+}
+
+
+.password-requirements span {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 5px;
+
+    color: var(--gray-500);
+
+    font-size: 8px;
+
+}
+
+
+.password-requirements i {
+
+    font-size: 5px;
+
+    color: var(--gray-300);
+
+}
+
+
+.password-requirements span.valid {
+
+    color: var(--teal);
+
+}
+
+
+.password-requirements span.valid i {
+
+    color: var(--teal);
+
+}
+
+
+
+/* =========================================
+   TERMS
+========================================= */
+
+.terms {
+
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 8px;
+
+    color: var(--gray-500);
+
+    font-size: 8px;
+
+    line-height: 1.6;
+
+    margin-top: 20px;
+
+}
+
+
+.terms input {
+
+    display: none;
+
+}
+
+
+.custom-checkbox {
+
+    width: 15px;
+
+    height: 15px;
+
+    flex-shrink: 0;
+
+    border: 1px solid var(--gray-300);
+
+    border-radius: 4px;
+
+}
+
+
+.terms input:checked + .custom-checkbox {
+
+    background: var(--teal);
+
+    border-color: var(--teal);
+
+}
+
+
+.terms input:checked + .custom-checkbox::after {
+
+    content: "\f00c";
+
+    display: grid;
+
+    place-items: center;
+
+    width: 100%;
+
+    height: 100%;
+
+    color: white;
+
+    font-family: "Font Awesome 6 Free";
+
+    font-weight: 900;
+
+    font-size: 8px;
+
+}
+
+
+.terms a {
+
+    color: var(--teal);
+
+    font-weight: 700;
+
+}
+
+
+
+/* =========================================
+   BUTTONS
+========================================= */
+
+.next-button,
+.create-button {
+
+    height: 43px;
+
+    border: 0;
+
+    border-radius: 7px;
+
+    color: white;
+
+    background: var(--teal);
+
+    font-size: 10px;
+
+    font-weight: 800;
+
+}
+
+
+.next-button {
+
+    width: 100%;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 8px;
+
+    margin-top: 5px;
+
+}
+
+
+.form-actions {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 10px;
+
+    margin-top: 22px;
+
+}
+
+
+.back-button {
+
+    height: 43px;
+
+    padding: 0 17px;
+
+    background: white;
+
+    border: 1px solid var(--gray-200);
+
+    border-radius: 7px;
+
+    color: var(--gray-600);
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+}
+
+
+.create-button {
+
+    min-width: 160px;
+
+    padding: 0 20px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 8px;
+
+}
+
+
+.next-button:hover,
+.create-button:hover {
+
+    background: #0B625C;
+
+}
+
+
+.back-button:hover {
+
+    background: var(--gray-50);
+
+}
+
+
+
+/* =========================================
+   ERROR
+========================================= */
+
+.register-error {
+
+    display: none;
+
+    align-items: center;
+
+    gap: 8px;
+
+    background: #FEF2F2;
+
+    border: 1px solid #FECACA;
+
+    color: #B91C1C;
+
+    padding: 9px 11px;
+
+    border-radius: 6px;
+
+    font-size: 8px;
+
+    margin-top: 15px;
+
+}
+
+
+.register-error.show {
+
+    display: flex;
+
+}
+
+
+
+/* =========================================
+   LOADER
+========================================= */
+
+.loader {
+
+    display: none;
+
+    width: 13px;
+
+    height: 13px;
+
+    border: 2px solid rgba(255,255,255,.4);
+
+    border-top-color: white;
+
+    border-radius: 50%;
+
+    animation: spin .7s linear infinite;
+
+}
+
+
+.create-button.loading .loader {
+
+    display: block;
+
+}
+
+
+.create-button.loading #createButtonText,
+.create-button.loading #createButtonIcon {
+
+    display: none;
+
+}
+
+
+@keyframes spin {
+
+    to {
+        transform: rotate(360deg);
+    }
+
+}
+
+
+
+/* =========================================
+   LOGIN
+========================================= */
+
+.login-link {
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 5px;
+
+    margin-top: 25px;
+
+    padding-top: 18px;
+
+    border-top: 1px solid var(--gray-100);
+
+    color: var(--gray-500);
+
+    font-size: 9px;
+
+}
+
+
+.login-link a {
+
+    color: var(--teal);
+
+    font-weight: 800;
+
+}
+
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media(max-width:950px) {
+
+    .register-page {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .register-brand {
+
+        display: none;
+
+    }
+
+
+    .register-panel {
+
+        padding: 35px 20px;
+
+    }
+
+
+    .mobile-logo {
+
+        display: flex;
+
+        align-items: center;
+
+        gap: 10px;
+
+        margin-bottom: 35px;
+
+    }
+
+
+    .mobile-logo .brand-logo-icon {
+
+        width: 38px;
+
+        height: 38px;
+
+    }
+
+
+    .mobile-logo strong {
+
+        display: block;
+
+        color: var(--navy);
+
+        font-size: 12px;
+
+        letter-spacing: 2px;
+
+    }
+
+
+    .mobile-logo span {
+
+        display: block;
+
+        color: var(--teal);
+
+        font-size: 7px;
+
+        font-weight: 800;
+
+        letter-spacing: 2px;
+
+    }
+
+}
+
+
+@media(max-width:600px) {
+
+    .register-panel {
+
+        padding: 25px 17px;
+
+        align-items: flex-start;
+
+    }
+
+
+    .form-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .form-group.full {
+
+        grid-column: auto;
+
+    }
+
+
+    .progress-line {
+
+        width: 35px;
+
+        margin: 0 8px;
+
+    }
+
+
+    .password-requirements {
+
+        display: grid;
+
+        gap: 7px;
+
+    }
+
+
+    .form-actions {
+
+        flex-direction: column-reverse;
+
+    }
+
+
+    .back-button,
+    .create-button {
+
+        width: 100%;
+
+    }
+
+}
+
+

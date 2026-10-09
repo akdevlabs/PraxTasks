@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="LearnHub - Descubre tu pasión y aprende a tu propio ritmo con cursos interactivos">
+  <!-- Fuentes y estilos -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/4a32509195.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Crear cuenta User | Prax Tasks</title>
+  <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+    <link rel="stylesheet" href="CRMACFU.css">
+
+</head>
+
+
+<body>
+    <div class="register-page"> 
+        <!-- ===================================================== 
+        LEFT BRAND 
+        ====================================================== --> 
+        <section class="register-brand"> 
+            <div class="brand-background">
+
+            </div> 
+            <div class="brand-content"> 
+                <!-- BRAND -->
+                    <div class="brand-logo"> 
+                    <div class="brand-logo-icon"> 
+                        <i class="fa-solid fa-chart-line"></i> 
+                    </div> 
+                    <div> 
+                        <strong>Prax</strong> <span>Tasks</span> 
+                    </div> 
+                </div> 
+                <!-- MESSAGE --> 
+                <div class="brand-message"> 
+                    <span class="eyebrow"> ACCESO DE EQUIPO </span> 
+                    <h1> Trabaja mejor. 
+                        <strong> Todo en un solo lugar. </strong> 
+                    </h1> 
+                    <p> Accede a las herramientas de tu empresa, administra tus tareas, clientes, documentos y actividades desde Prax Tasks. </p> 
+                    <!-- BENEFITS --> 
+                    <div class="benefits"> 
+                        <div class="benefit"> 
+                            <i class="fa-solid fa-circle-check"></i> 
+                            <span> Administra tus tareas </span> 
+                        </div> 
+                        <div class="benefit"> 
+                            <i class="fa-solid fa-circle-check"></i> 
+                            <span> Consulta clientes y prospectos </span> 
+                        </div> 
+                        <div class="benefit"> 
+                            <i class="fa-solid fa-circle-check"></i> 
+                            <span> Accede a documentos y actividades </span> 
+                        </div> <div class="benefit"> 
+                            <i class="fa-solid fa-circle-check"></i> 
+                            <span> Trabaja con tu equipo </span> 
+                        </div> 
+                    </div> 
+                </div> 
+                <!-- FOOTER --> 
+                <div class="brand-footer"> 
+                    <span> © 2026 Prax Tasks </span> 
+                    <span> Plataforma segura </span> 
+                </div> 
+            </div> 
+        </section> 
+        <!-- ===================================================== 
+                        REGISTER PANEL 
+        ====================================================== --> 
+        <section class="register-panel">
+
+            <div class="register-container">
+
+                <!-- MOBILE LOGO -->
+                <div class="mobile-logo">
+
+                    <div class="brand-logo-icon">
+                        <i class="fa-solid fa-chart-line"></i>
+                    </div>
+
+                    <div>
+                        <strong>Prax</strong>
+                        <span>Tasks</span>
+                    </div>
+
+                </div>
+
+
+                <!-- HEADER -->
+                <div class="register-header">
+
+                    <span class="register-label">
+                        CREAR CUENTA
+                    </span>
+
+                    <h2>
+                        Crea tu cuenta
+                    </h2>
+
+                    <p>
+                        Registra tu cuenta para acceder a Prax Tasks.
+                    </p>
+
+                </div>
+
+
+
+
+
+                <!-- =================================================
+                    FORM
+                ================================================== -->
+
+                <form id="userRegisterForm" novalidate>
+
+                    <div class="form-section" id="userStep">
+
+                        <div class="form-grid">
+
+
+
+                            <!-- BUSINESS ID -->
+                            <div class="form-group full">
+
+                                <label for="businessIdInput">
+                                    ID de la empresa
+                                </label>
+
+                                <div class="input-wrapper">
+
+                                    <i class="fa-solid fa-building"></i>
+
+                                    <input 
+                                        type="text" 
+                                        id="businessIdInput" 
+                                        placeholder="Ej. BUS-10245" 
+                                        autocomplete="off" 
+                                        required
+                                    >
+
+                                </div>
+
+                                <small class="field-help">
+                                    Ingresa el ID proporcionado por el administrador de tu empresa.
+                                </small>
+
+                                <button type="button" id="findId">
+                                    Find
+                                </button>
+
+                            </div>
+
+
+
+
+                            <!-- FIRST NAME -->
+
+                            <div class="form-group">
+
+                                <label for="firstName">
+                                    Nombre
+                                </label>
+
+                                <div class="input-wrapper">
+
+                                    <i class="fa-regular fa-user"></i>
+
+                                    <input
+                                        type="text"
+                                        id="firstName"
+                                        placeholder="Carlos"
+                                        autocomplete="given-name"
+                                        required
+                                    >
+
+                                </div>
+
+                            </div>
+
+
+                            <!-- LAST NAME -->
+
+                            <div class="form-group">
+
+                                <label for="lastName">
+                                    Apellido
+                                </label>
+
+                                <div class="input-wrapper">
+
+                                    <i class="fa-regular fa-user"></i>
+
+                                    <input
+                                        type="text"
+                                        id="lastName"
+                                        placeholder="Martínez"
+                                        autocomplete="family-name"
+                                        required
+                                    >
+
+                                </div>
+
+                            </div>
+
+
+
+
+
+                            <!-- PHONE -->
+
+                            <div class="form-group">
+
+                                <label for="phone">
+                                    Teléfono
+                                </label>
+
+                                <div class="input-wrapper">
+
+                                    <i class="fa-solid fa-phone"></i>
+
+                                    <input
+                                        type="tel"
+                                        id="phone"
+                                        placeholder="55 1234 5678"
+                                        autocomplete="tel"
+                                        required
+                                    >
+
+                                </div>
+
+                            </div>
+
+
+                            <!-- DATE OF BIRTH -->
+
+                            <div class="form-group">
+
+                                <label for="dateOfBirth">
+                                    Fecha de nacimiento
+                                </label>
+
+                                <div class="input-wrapper">
+
+                                    <i class="fa-regular fa-calendar"></i>
+
+                                    <input
+                                        type="date"
+                                        id="dateOfBirth"
+                                        autocomplete="bday"
+                                        required
+                                    >
+
+                                </div>
+
+                            </div>
+
+
+                            <!-- POSITION -->
+
+                            <div class="form-group full">
+
+                                <label for="position">
+                                    Puesto o función
+                                </label>
+
+                                <div class="input-wrapper select-wrapper">
+
+                                    <i class="fa-solid fa-user-tie"></i>
+
+                                    <select id="position" required>
+
+                                        <option value="">
+                                            Selecciona una opción
+                                        </option>
+
+                                        <option value="Empleado">
+                                            Empleado
+                                        </option>
+
+                                        <option value="Asistente">
+                                            Asistente
+                                        </option>
+
+                                        <option value="Contador">
+                                            Contador
+                                        </option>
+
+                                        <option value="Abogado">
+                                            Abogado
+                                        </option>
+
+                                        <option value="Consultor">
+                                            Consultor
+                                        </option>
+
+                                        <option value="Ventas">
+                                            Ventas
+                                        </option>
+
+                                        <option value="Administración">
+                                            Administración
+                                        </option>
+
+                                        <option value="Operaciones">
+                                            Operaciones
+                                        </option>
+
+                                        <option value="Recursos Humanos">
+                                            Recursos Humanos
+                                        </option>
+
+                                        <option value="Otro">
+                                            Otro
+                                        </option>
+
+                                    </select>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- ERROR -->
+
+                        <div
+                            class="register-error"
+                            id="registerError"
+                        >
+
+                            <i class="fa-solid fa-circle-exclamation"></i>
+
+                            <span></span>
+
+                        </div>
+
+
+
+
+                        <div class="form-grid">
+                            <!-- USER EMAIL -->
+
+                            <div class="form-group full">
+
+                                <label for="email">
+                                    Correo electrónico
+                                </label>
+
+                                <div class="input-wrapper">
+
+                                    <i class="fa-regular fa-envelope"></i>
+
+                                    <input
+                                        type="email"
+                                        id="email"
+                                        placeholder="carlos@empresa.com"
+                                        autocomplete="email"
+                                        required
+                                    >
+
+                                </div>
+
+                                <small class="field-help">
+                                    Este será tu correo para iniciar sesión.
+                                </small>
+
+                            </div>
+
+                            <!-- PASSWORD -->
+
+                            <div class="form-group full">
+
+                                <label for="password">
+                                    Contraseña
+                                </label>
+
+                                <div class="input-wrapper">
+
+                                    <i class="fa-solid fa-lock"></i>
+
+                                    <input
+                                        type="password"
+                                        id="password"
+                                        placeholder="Mínimo 8 caracteres"
+                                        autocomplete="new-password"
+                                        required
+                                    >
+
+                                    <button
+                                        type="button"
+                                        class="password-toggle"
+                                        id="passwordToggle"
+                                        aria-label="Mostrar contraseña"
+                                    >
+
+                                        <i class="fa-regular fa-eye"></i>
+
+                                    </button>
+
+                                </div>
+
+                            </div>
+
+
+                            <!-- CONFIRM PASSWORD -->
+
+                            <div class="form-group full">
+
+                                <label for="confirmPassword">
+                                    Confirmar contraseña
+                                </label>
+
+                                <div class="input-wrapper">
+
+                                    <i class="fa-solid fa-lock"></i>
+
+                                    <input
+                                        type="password"
+                                        id="confirmPassword"
+                                        placeholder="Repite tu contraseña"
+                                        autocomplete="new-password"
+                                        required
+                                    >
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- PASSWORD REQUIREMENTS -->
+
+                        <div class="password-requirements">
+
+                            <span id="lengthRule">
+
+                                <i class="fa-solid fa-circle"></i>
+
+                                Mínimo 8 caracteres
+
+                            </span>
+
+
+                            <span id="numberRule">
+
+                                <i class="fa-solid fa-circle"></i>
+
+                                Un número
+
+                            </span>
+
+
+                            <span id="matchRule">
+
+                                <i class="fa-solid fa-circle"></i>
+
+                                Las contraseñas coinciden
+
+                            </span>
+
+                        </div>
+
+
+                        <!-- TERMS -->
+
+                        <label class="terms">
+
+                            <input
+                                type="checkbox"
+                                id="terms"
+                                required
+                            >
+
+                            <span class="custom-checkbox"></span>
+
+                            <span>
+
+                                Acepto los
+
+                                <a href="#">
+                                    Términos de servicio
+                                </a>
+
+                                y el
+
+                                <a href="#">
+                                    Aviso de privacidad
+                                </a>.
+
+                            </span>
+
+                        </label>
+
+
+                        <!-- ACTIONS -->
+
+                        <div class="form-actions">
+
+
+
+
+
+                            <button
+                                type="submit"
+                                class="create-button"
+                                id="createButton"
+                            >
+
+                                <span id="createButtonText">
+                                    Crear cuenta
+                                </span>
+
+                                <i
+                                    class="fa-solid fa-arrow-right"
+                                    id="createButtonIcon"
+                                ></i>
+
+                                <span
+                                    class="loader"
+                                    id="registerLoader"
+                                ></span>
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </form>
+
+
+                <!-- LOGIN -->
+
+                <div class="login-link">
+
+                    <span>
+                        ¿Ya tienes una cuenta?
+                    </span>
+
+                    <a href="login.html">
+                        Iniciar sesión
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+    </div>
+
+
+<script type="module" src="CRMACFU.js"></script>
+
+</body>
+
+</html>
